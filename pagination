@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Cards</title>
+	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href=
+"https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<script src=
+"https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">
+	</script>
+</head>
+
+<body>
+    <div class="spinner-border text-primary"></div>
+    <br>
+    <div class="spinner-grow text-success"></div>
+
+    <div class="container mt-5">
+        <div class="card " style="width: 18rem;"  >
+            <img class="card-img-top" src=
+    "https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg"
+                                    alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">User Name</h5>
+                <p class="card-text">Passionate about programming.</p>
+     
+                <a href="#" class="btn btn-primary">See Profile</a>
+            </div>
+        </div>
+        </div>
+
+        <!-- Pagination -->
+        <div class="container">
+            <h2>Pagination </h2>
+            <p> Fall in love with coding</p>
+            <!-- Declare the pagination class -->
+                  <ul class="pagination">
+            
+                      <!-- Declare the item in the group -->
+                      <li class="page-item">
+            
+                          <!-- Declare the link of the item -->
+                          <a class="page-link" href="#">Previous</a>
+                      </li>
+            
+                      <!-- Rest of the pagination items -->
+                      <li class="page-item">
+                          <a class="page-link" href="#">1</a>
+                      </li>
+                      <li class="page-item">
+                          <a class="page-link" href="#">2</a>
+                      </li>
+                      <li class="page-item">
+                          <a class="page-link" href="#">3</a>
+                      </li>
+                      <li class="page-item">
+                          <a class="page-link" href="#">Next</a>
+                      </li>
+                  </ul>
+          </div>
+          <!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">MyWebsite</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Footer in Website</title>
+    <style>
+        .footer{
+            position: fixed;
+            left:0;
+            bottom: 0;
+            width: 100%;
+            background-color: purple;
+            color:white;
+            text-align: center;
+            box-shadow: 2px -10px 10px blue;
+        }
+        /* Social media icons */
+        .social-icons {
+            margin-top: 10px;
+        }
+
+        .social-icons a {
+            text-decoration: none; 
+            margin: 0 15px;
+            color: white;
+            font-size: 15px;
+        }
+
+        .social-icons a:hover {
+            color: #ff0;
+            transform: scale(1.1);
+        }
+          /* Responsive footer */
+        @media (max-width: 600px) {
+            .footer {
+                padding: 15px 0;
+            }
+
+            .footer p {
+                font-size: 14px;
+            }
+
+            .social-icons a {
+                font-size: 18px;
+                margin: 0 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="footer">
+        <p>&copy; all rights reserved by Olive</p>
+
+                <!-- Social Media Icons -->
+                <div class="social-icons">
+                    <a href="#" title="Facebook">Facebook</a> |
+                    <a href="#" title="Twitter">Twitter</a> |
+                    <a href="#" title="Instagram">Instagram</a>
+                </div>
+    </div>
+
+</body>
+</html>
