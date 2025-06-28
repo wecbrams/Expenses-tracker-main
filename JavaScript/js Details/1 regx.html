@@ -12,15 +12,14 @@
 
     <script>
       var str = "hello how are doing for the day"; 
-      var search_position = str.search(" ");
+      var search_position = str.search("how");
       var txt = str.replace("how are" , "how are you")
       var x = 70;;
       var y = 90;
       document.getElementById("search_result").innerHTML = search_position;
       document.getElementById("replace_result").innerHTML = txt;
 
-      document.getElementById("string_result").innerHTML = String(x) + String(y); // Does not add because it is a string it concatenates 
-
+     document.getElementById("string_result").innerHTML = String(x) + String(y); // Does not add because it is a string it concatenates 
     </script>
   </body>
 </html>

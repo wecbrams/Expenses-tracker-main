@@ -30,8 +30,8 @@
 # print("\nHello", name, "\nwelcome to codingal")
 
 
-import keyword
+# import keyword
 
-# print all the Python keywords
-print("Python keywords are...\n")
-print(keyword.kwlist)
+# # print all the Python keywords
+# print("Python keywords are...\n")
+# print(keyword.kwlist)

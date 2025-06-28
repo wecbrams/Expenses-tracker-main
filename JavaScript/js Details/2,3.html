@@ -3,13 +3,9 @@
   <body>
 
     <h2>JavaScript Error Handling</h2>
-
     <p>This example demonstrates how to use <b>catch</b> to diplay an error.</p>
-
     <p id="error_message"></p>
-
     <p id="result"></p>
-
     <script>
       try {
         addalert("Welcome guest!");
@@ -17,7 +13,6 @@
       catch(err) {
         document.getElementById("error_message").innerHTML = err.message;
       }
-
 
       add = (a,b) => a+b;
       document.getElementById("result").innerHTML = add(4,6);

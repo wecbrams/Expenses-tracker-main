@@ -2,8 +2,8 @@ a = 10
 b = 12
 c = 12
 
-print(a != b)
-print(b != c)
+print(a != b) #T
+print(b != c)  #F
 
 a = "python"
 b = "coding"
@@ -21,3 +21,5 @@ a = int(input("enter a number"))
 
 if a%2 != 0 :
     print(a, "is not even number.")
+else:
+    print("Congrats for Even number entered")
