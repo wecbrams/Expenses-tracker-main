@@ -1,6 +1,6 @@
 # Example 1: Constant Space Complexity
 def sum_n(n):
-    return n * (n + 1) // 2
+    return n * (n + 1) \\ 2
 
 print("Sum using formula:", sum_n(10))
 # Space Complexity: O(1)

@@ -12,7 +12,7 @@ def ai_number_guesser():
     input("🔑 Press Enter when you're ready...")
 
     while low <= high:
-        guess = (low + high) // 2
+        guess = (low + high) \\ 2
         attempts += 1
         print(f"\n🎯 My guess is: {guess}")
         feedback = input("Press (h) to guess higher 🔼, (l) to guess lower 🔽, or (c) for Correct ✅? ").lower()

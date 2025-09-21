@@ -1,0 +1,25 @@
+file= open('h.txt', 'r')
+print(file.read())
+file.close()
+
+file= open('h.txt', 'r')
+print("Reading parts of a file")
+print(file.read(12))
+file.close()
+
+file= open('h.txt', 'a')
+file.write("I am passionate about coding")
+file.close()
+
+print('\n\n')
+file= open('h.txt', 'r')
+print("\nReading multiple lines of a file\n")
+print(file.readline())
+print(file.readline())
+print(file.readline())
+file.close()
+
+file= open('h.txt', 'r')
+print("\nReading lines of a file\n")
+print(file.readlines())
+file.close()

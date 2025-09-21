@@ -5,7 +5,7 @@ name = input("What's your name? ")
 print("Nice to meet you, " + name + "!")
 print("Type 'exit' to quit.\n")
 
-while True:
+while True:  
     sentence = input("Your sentence: ")
     
     if sentence.lower() == 'exit':
@@ -16,9 +16,9 @@ while True:
     sentiment = blob.sentiment.polarity
 
     if sentiment > 0:
-        print("Positive sentiment detected!\n")
+        print("Happy!\n")
     elif sentiment < 0:
-        print("Negative sentiment detected!\n")
+        print("Sad!\n")
     else:
         print("Neutral sentiment detected!\n")
 

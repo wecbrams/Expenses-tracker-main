@@ -1,6 +1,6 @@
 # write in file using with()function
 with open('Codingal.txt', 'w') as file:
-  file.write("Hi! I am Penguin and I am 1 yr old.")
+  file.write("\nHi! I am Penguin and I am 1 yr old.")
 file.close()
 
 # split file into words

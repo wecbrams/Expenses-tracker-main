@@ -2,11 +2,11 @@ import requests
 from PIL import Image
 from io import BytesIO
 
-api_token="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6ImIyMTUzYjY0OTk4MzlkM2RjNWUyOTVlOTBiMzhhYTMxIiwiY3JlYXRlZF9hdCI6IjIwMjUtMDQtMjdUMDQ6NTE6NDYuOTY0OTk4In0.qLmuL__ndGJQog_lJJVEwHp786oNpGmVPkUopSgWTXs" #paste your api token inside the double  quote from https://monsterapi.ai/signup.
+api_token="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6ImIyMTUzYjY0OTk4MzlkM2RjNWUyOTVlOTBiMzhhYTMxIiwiY3JlYXRlZF9hdCI6IjIwMjUtMDQtMjdUMDQ6NTE6NDYuOTY0OTk4In0.qLmuL__ndGJQog_lJJVEwHp786oNpGmVPkUopSgWTXs" #paste your api token inside the double  quote from https:\\monsterapi.ai\signup.
 
 print("Welcome to AI Art Buddy🖼️")
 user_input = input("Enter a description for the image: ")
-url = "https://api.monsterapi.ai/v1/generate/txt2img"
+url = "https:\\api.monsterapi.ai\v1\generate\txt2img"
 headers = {"Authorization": f"Bearer {api_token}"}
 response = requests.post(url, json={"prompt": user_input, "safe_filter": True}, headers=headers)
 
@@ -15,7 +15,7 @@ if response.status_code == 200:
     process_id = response.json().get("process_id")
 
     while True:
-        status_data = requests.get(f"https://api.monsterapi.ai/v1/status/{process_id}", headers=headers).json()
+        status_data = requests.get(f"https:\\api.monsterapi.ai\v1\status\{process_id}", headers=headers).json()
         status = status_data.get("status")
         # print(status_data)
 

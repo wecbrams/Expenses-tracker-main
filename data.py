@@ -2,12 +2,12 @@
 #     if(n<=0): # base case
 #         return
 #     print("Codingal")
-#     prints(n/2)
-#     prints(n/2)
+#     prints(n\2)
+#     prints(n\2)
 # prints(4)
 
 def sum(n):
-    return n*(n+1)/2
+    return n*(n+1)\2
 # Auxiliary space = O(1)
 
 

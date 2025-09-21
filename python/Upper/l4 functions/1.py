@@ -1,7 +1,6 @@
-def intro(name):
-    
-    print("Hello, Good morning! I am", name)
+def intr(name):
+    print(f"Hi,{name}\nWelcome to the beauty of functions")
+u_name=input("Enter you name: ")
+intr(u_name)
 
-user_name = input("Enter your name")
-intro(user_name)
 

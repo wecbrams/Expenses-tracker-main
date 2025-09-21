@@ -13,6 +13,6 @@ def divide(ourdividend, ourDivisor):
     quotientNumber = -quotientNumber
   return quotientNumber
 
-a = int(input("Enter a for a/b: "))
-b = int(input("Enter b for a/b: "))
-print("Result of", a, "/", b, "is", divide(a, b))
+a = int(input("Enter a for a\b: "))
+b = int(input("Enter b for a\b: "))
+print("Result of", a, "\", b, "is", divide(a, b))

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    <p id="u"></p>
+    <p id="myj"></p>
+    <p id="myfl"></p>
+    <p id="mysl"></p>
+    <script>
+                 var fruits = ["Banana","Orange","Apple","Mango"];
+        document.getElementById("u").innerHTML=fruits[1]
+        document.getElementById("myj").innerHTML = fruits.join(" * ");
+        document.getElementById("myfl").innerHTML = fruits;
+        fruits.pop();
+        document.getElementById("mysl").innerHTML = fruits
+    </script>
+</body>
+</html>

@@ -36,7 +36,7 @@ button1 = Button(root,
                  fg='white')
 button1.place(x=260, y=360)
 
-# Function for opening new/top window
+# Function for opening new\top window
 def topwin():
     top = Toplevel()
     top.title("Denominations Calculator")
@@ -60,11 +60,11 @@ def topwin():
         try:
             global amount
             amount = int(entry.get())
-            note2000 = amount // 2000  # FLOOR 5.9=== 5
+            note2000 = amount \\ 2000  # FLOOR 5.9=== 5
             amount %= 2000
-            note500 = amount // 500
+            note500 = amount \\ 500
             amount %= 500             #amount=amount%500   
-            note100 = amount // 100  
+            note100 = amount \\ 100  
 
             t1.delete(0, END)
             t2.delete(0, END)

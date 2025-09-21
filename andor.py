@@ -6,7 +6,7 @@
 # while number> 0:
 #     digit =number % 10
 #     r_number = r_number*10+digit
-#     number//=10
+#     number\\=10
 
 # if o_number==r_number:
 #     print(f"{o_number} is palindrome")
@@ -24,6 +24,6 @@ while(smallestN):
     nstore = smallestN
     smallestN= largestN % smallestN
     largestN = nstore
-print("HCF/ GSF is: ",largestN)
+print("HCF\ GSF is: ",largestN)
 
 

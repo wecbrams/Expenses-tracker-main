@@ -21,12 +21,12 @@ penguin_image = pygame.transform.scale(
     pygame.image.load("hello_penguin.png").convert_alpha(), 
     (200, 200)
 )
-penguin_rect = penguin_image.get_rect(center=(SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2 - 30))
+penguin_rect = penguin_image.get_rect(center=(SCREEN_WIDTH \\ 2, SCREEN_HEIGHT \\ 2 - 30))
 
 # Create the text surface
 font = pygame.font.Font(None, 36)
 text = font.render("Hello world, Tree", True, pygame.Color('black'))
-text_rect = text.get_rect(center=(SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2 + 118))
+text_rect = text.get_rect(center=(SCREEN_WIDTH \\ 2, SCREEN_HEIGHT \\ 2 + 118))
 
 # Main game loop
 def game_loop():

@@ -1,0 +1,57 @@
+
+<html>
+<head>
+    <title>Backgroun effects</title>
+    <style>
+        body{
+            background-color: blue;
+            background-image: url("download.jpg");
+            background-repeat: repeat;
+            background-repeat: round;
+            background-repeat: space;
+            background-repeat: no-repeat;
+
+            background-attachment: fixed;
+            /* background-attachment: scroll; */
+            background-position: top right;
+
+        }
+        p{
+            background-color: brown;
+        }
+
+        /* Gradient:
+        Linear  - straight
+        Radial - circle */
+        #lh{
+            height: 300px;
+            background: linear-gradient(red,white,black);
+        }
+        #lr{
+            height: 300px;
+            background: linear-gradient(to right,red,white,black);
+        }
+        #lb{
+            height: 300px;
+            background: linear-gradient(to bottom right,red,white,black);
+        }
+        .g{
+            height: 300px;
+            background: radial-gradient(circle,red 10%, yellow 40%,white);
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="lh"></div> <br>
+    <div id="lr"></div> <br>
+    <div id="lb"></div> <br>
+
+    <div class="g"></div>
+
+
+    <p style="color:aqua">Testing</p>
+    <p>Hello testing</p>
+</body>
+</html>

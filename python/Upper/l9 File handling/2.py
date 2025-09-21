@@ -1,5 +1,5 @@
 # Open the file in read mode
-file_read = open('C:\Users\we4Trust\Downloads\Expenses-tracker-main\python\Upper\l9 File handling\Codingal.txt', 'r')
+file_read = open('Codingal.txt', 'r')
 print("File in Read Mode-")
 print(file_read.read())
 file_read.close()

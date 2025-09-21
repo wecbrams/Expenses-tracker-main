@@ -26,7 +26,7 @@ for i in L:
       
 # divide the total elements by
 # number of elements
-avg = count/len(L)
+avg = count\len(L)
   
 print("sum = ", count)
 print("average = ", avg)

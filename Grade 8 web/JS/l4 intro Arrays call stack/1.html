@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>Arrays</title>
+    </head>
+    <body>
+        <h2>Arrays</h2>
+        <p id="f"></p>
+      
+
+        <script>
+            var cars=['Coding','Magic','Learn','Apple']
+            document.getElementById('f').innerHTML=cars[2]
+            document.write(cars.join('*') +"<br>")
+            document.write(cars.pop() +"<br>")
+            document.write(cars +"<br>")
+
+
+            //Call stack
+            function add(a,b){
+                return a+b
+            }
+
+            function avg(a,b){
+                return add(a,b)/2
+            }
+            let result=avg(10,20)
+            document.write(result)
+
+        </script>
+    </body>
+</html>

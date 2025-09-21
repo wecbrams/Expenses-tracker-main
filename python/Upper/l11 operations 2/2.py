@@ -6,7 +6,9 @@ new_file.close()
 import os
 print("Checking if my_file exists or not....")
 if os.path.exists("my_file.txt"):
+  print("File exists and is being deleted...")
   os.remove("my_file.txt")
+  print("File deleted successfully...")
 else:
   print("The file does not exist")
 
@@ -17,7 +19,6 @@ my_file.close()
 
 #delete file named codingal
 os.remove('New_File1.txt')
-
 #delete the folder
 os.rmdir('folder')
 

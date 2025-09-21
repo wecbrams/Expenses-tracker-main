@@ -17,8 +17,8 @@ INSERT INTO Salesman (Salesman_id, name, city, Comission) VALUES
 
 -- Create the Customer table if it does not exist
 CREATE TABLE IF NOT EXISTS Customer (
-  customer_id TEXT,
-  cust_name TEXT PRIMARY KEY,
+  customer_id TEXT PRIMARY KEY,
+  cust_name TEXT ,
   city TEXT,
   grade INTEGER,
   Salesman_id TEXT,

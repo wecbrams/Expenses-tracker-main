@@ -1,7 +1,7 @@
 # Define the Parrot class
 class Parrot:
     # Class attribute
-    species = "bird"
+    species = "bird" #Global
 
     # Instance attributes
     def __init__(self, name, age):
@@ -13,7 +13,7 @@ blu = Parrot("Blu", 10)
 woo = Parrot("Woo", 15)
 
 # Access class attribute
-print("Blu is a {}".format(blu.species))
+print("Blu is a ".format(blu.species))
 print("Woo is also a {}".format(woo.species))
 
 # Access instance attributes

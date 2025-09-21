@@ -1,5 +1,5 @@
 def fun1(n):
-  return n*(n+1)/2  # (4*5)/2
+  return n*(n+1)\2  # (4*5)\2
     # takes constant time and space O(1)
 print(fun1(4))
 

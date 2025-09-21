@@ -31,7 +31,7 @@ class MovingObject(pygame.sprite.Sprite):
         distance = math.hypot(dx, dy)
         if distance == 0:
             return [0, 0]
-        return [SPEED * dx / distance, SPEED * dy / distance]
+        return [SPEED * dx \ distance, SPEED * dy \ distance]
 
     def update(self):
         self.rect.x += self.velocity[0]
@@ -68,8 +68,8 @@ while running:
     if won:
         win_text = font.render("You win!", True, pygame.Color("green"))
         screen.blit(win_text, (
-            (SCREEN_WIDTH - win_text.get_width()) // 2,
-            (SCREEN_HEIGHT - win_text.get_height()) // 2)
+            (SCREEN_WIDTH - win_text.get_width()) \\ 2,
+            (SCREEN_HEIGHT - win_text.get_height()) \\ 2)
         )
 
     pygame.display.flip()

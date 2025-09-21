@@ -87,7 +87,7 @@ def draw_enemy(x, y):
 def fire_bullet(x, y):
     global bullet_state
     bullet_state = "fire"
-    pygame.draw.rect(screen, RED, (x + PLAYER_WIDTH // 2 - BULLET_WIDTH // 2, y, BULLET_WIDTH, BULLET_HEIGHT))
+    pygame.draw.rect(screen, RED, (x + PLAYER_WIDTH \\ 2 - BULLET_WIDTH \\ 2, y, BULLET_WIDTH, BULLET_HEIGHT))
 
 def isCollision(enemyX, enemyY, bulletX, bulletY):
     distance = math.sqrt((enemyX - bulletX)**2 + (enemyY - bulletY)**2)

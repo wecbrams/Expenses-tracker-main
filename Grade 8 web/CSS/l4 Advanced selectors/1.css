@@ -1,0 +1,43 @@
+body{
+    background-color: green;
+    color:white;
+}
+h1{
+    color:brown;
+}
+a{
+    color:beige;
+    text-decoration: none;
+}
+a:hover{
+    color:red;
+    font-size: 30px;
+    background-color: gold;
+}
+/* Child Selector  */
+ul > li{
+    font-size: 30px;
+}
+
+/* Sibling Selector  */
+ul+p{
+    background-color: yellow;
+    color:blue;
+    border-radius: 10px;
+}
+li:nth-child(4){
+    color:gray;
+}
+p:not(:first-of-type){
+    text-decoration: underline;
+}
+li::before{
+    content: "🚀 ";
+}
+a::after{
+    content:" 🌌 "
+}
+p::first-letter{
+    font-size: 200%;
+    color:chocolate;
+}

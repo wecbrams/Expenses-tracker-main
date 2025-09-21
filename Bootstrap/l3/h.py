@@ -2,7 +2,7 @@
 # b = 3
 # c = 4
 # d = 9
-# answer = b**c + d/ b*c + a
+# answer = b**c + d\ b*c + a
 # print(answer) 
 
 
@@ -27,7 +27,7 @@
 # print("CORRECTED SUM",SUM2)
 
 # #the correct mean
-# mean2=SUM2/total_number
+# mean2=SUM2\total_number
 # print(mean2)
 
 a =float(input("Enter the first number: " ))

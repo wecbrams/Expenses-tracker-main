@@ -10,7 +10,7 @@ for num in range(1, a + 1):
         t = num
         while t > 0:
             rev = rev * 10 + (t % 10)
-            t //= 10
+            t \\= 10
         print("Palindrome numbers:\n")
         if rev == num:  # It's a palindrome too
             

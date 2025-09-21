@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+    <title>Background</title>
+    <style>
+        body{
+            background-image: url("download.jpg");
+            background-repeat: no-repeat ;
+            /* background-repeat: round;
+            background-repeat: space; */
+            background-attachment: fixed;
+            background-attachment: scroll;
+            background-position: right top ;
+
+        }
+        p{
+            background-color: yellow;
+        }
+        #tb{
+            height: 200px;
+            background: linear-gradient(pink,blue,yellow);
+
+        }
+        #lr{
+            height: 200px;
+            background: linear-gradient(to right,pink,blue,yellow);
+        }
+        #r{
+            height: 200px;
+            background: linear-gradient(to bottom right,pink,blue,yellow);
+        }
+
+        .r{
+            height: 200px;
+            background: radial-gradient(circle,red 20%, white, yellow 10%, purple)
+        }
+      
+    </style>
+</head>
+<body>
+    <p>Hello</p>
+    <div id="tb"></div><br>
+    <div id="lr"></div><br>
+    <div id="r"></div><br>
+    <div class="r"></div>
+</body>
+</html>

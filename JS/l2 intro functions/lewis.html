@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>Intro to functions</title>
+    </head>
+    <body>
+        <button onclick="mf(5,10)">Execute</button>
+        <button onclick="mult()">Test</button>
+        <p id="i"></p>
+        <p id="a"></p>
+
+        <script>
+            function mf(x,y){
+                if (y==undefined){
+                    y=8 //local
+                }
+                document.write(x*y)
+            }
+            // Variables
+            a = 6  //global
+            function mult(){
+                var b= 10 // local
+                document.getElementById("i").innerHTML=a*b
+
+            }
+                document.getElementById("a").innerHTML=a
+
+                var result = function(a,b){return a*b}
+                document.write(result(5,9))
+        </script>
+    </body>
+</html>

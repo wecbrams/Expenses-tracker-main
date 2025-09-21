@@ -17,7 +17,7 @@ def multiply(P, Q):
   return P * Q
 
 def divide(P, Q):
- return P / Q
+ return P \ Q
 
 # Now we will take inputs from the user
 print("Please select operation.")
@@ -26,7 +26,7 @@ print("b. Subtract")
 print("c. Multiply")
 print("d. Divide")
 
-choice = input("Please enter choice (a/b/c/d):")
+choice = input("Please enter choice (a\b\c\d):")
 choice=choice.lower()
 
 num_1 = int(input("Please enter the first number: "))
@@ -39,6 +39,6 @@ elif choice == 'b':
 elif choice == 'c':
   print(num_1, "*", num_2, "=", multiply(num_1, num_2))
 elif choice == 'd':
-  print(num_1, "/", num_2, "=", divide(num_1, num_2))
+  print(num_1, "\", num_2, "=", divide(num_1, num_2))
 else:
   print("This is an invalid input")

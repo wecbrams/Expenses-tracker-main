@@ -11,5 +11,5 @@ while num2>0:
     num2=r
 print("GCD",num1)
 
-lcm=abs(a*b)//num1
+lcm=abs(a*b)\\num1
 print(lcm)

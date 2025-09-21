@@ -20,7 +20,7 @@ jokes = [
 
 # Helper function to normalize user input
 def normalize_input(text):
-    return re.sub(r'\s+', ' ', text.strip().lower())
+    return re.sub(r'/s+', ' ', text.strip().lower())
 
 # Show help menu
 def show_help():

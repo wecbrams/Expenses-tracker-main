@@ -1,0 +1,30 @@
+#A{
+    font-size: 20px;
+    color: #2700d4;
+}
+
+#B{
+    font-size: 20px;
+    color: #d40000;
+}
+
+#C{
+    border-color: rgb(0, 0, 0);
+}
+
+.body{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#D{
+    font-size: 25px;
+}
+
+#E{
+    color: #ffffff;
+}
+
+#F{
+    font-size: 25px;
+    color: #000000;
+}

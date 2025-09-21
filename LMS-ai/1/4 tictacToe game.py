@@ -118,7 +118,7 @@ def tic_tac_toe():
                 else:
                     turn = "Player"
 
-        play_again = input("Do you want to play again? (yes/no): ").lower()
+        play_again = input("Do you want to play again? (yes\no): ").lower()
         if play_again != 'yes':
             print("Thank you for playing!")
             break

@@ -25,10 +25,10 @@ bottom_right2 = (top_left2[0] + rect2_width, top_left2[1] + rect2_height)
 cv2.rectangle(image_rgb, top_left2, bottom_right2, (255, 0, 255), 3)  # Magenta rectangle
 
 # Step 3: Draw Circles at the Centers of Both Rectangles
-center1_x = top_left1[0] + rect1_width // 2
-center1_y = top_left1[1] + rect1_height // 2
-center2_x = top_left2[0] + rect2_width // 2
-center2_y = top_left2[1] + rect2_height // 2
+center1_x = top_left1[0] + rect1_width \\ 2
+center1_y = top_left1[1] + rect1_height \\ 2
+center2_x = top_left2[0] + rect2_width \\ 2
+center2_y = top_left2[1] + rect2_height \\ 2
 cv2.circle(image_rgb, (center1_x, center1_y), 15, (0, 255, 0), -1)  # Filled green circle
 cv2.circle(image_rgb, (center2_x, center2_y), 15, (0, 0, 255), -1)  # Filled red circle
 
@@ -51,7 +51,7 @@ cv2.arrowedLine(image_rgb, arrow_start, arrow_end, (255, 255, 0), 3, tipLength=0
 cv2.arrowedLine(image_rgb, arrow_end, arrow_start, (255, 255, 0), 3, tipLength=0.05)  # Upward arrow
 
 # Annotate the height value
-height_label_position = (arrow_start[0] - 150, (arrow_start[1] + arrow_end[1]) // 2)
+height_label_position = (arrow_start[0] - 150, (arrow_start[1] + arrow_end[1]) \\ 2)
 cv2.putText(image_rgb, f'Height: {height}px', height_label_position, font, 0.8, (255, 255, 0), 2, cv2.LINE_AA)
 
 # Step 7: Display the Annotated Image

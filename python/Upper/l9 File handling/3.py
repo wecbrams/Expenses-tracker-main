@@ -1,6 +1,6 @@
 # Program to count number of lines in this file
 # Opening the file
-file = open("C:/Users/we4Trust/Downloads/Expenses-tracker-main/python/Upper/l9 File handling/Codingal.txt", "r")
+file = open(" File handling\Codingal.txt", "r")
 
 # Initialize the counter
 Counter = 0

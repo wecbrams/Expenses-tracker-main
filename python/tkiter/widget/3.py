@@ -1,6 +1,6 @@
 # Import necessary libraries
 from tkinter import *
- 
+
 # Setting up Main Window
 root = Tk()
 root.geometry("400x300")

@@ -1,33 +1,37 @@
 <html>
     <head>
+        43rc8jqas
         <title>
             grid system
         </title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
         <style>
             .col{
-                border: 2px solid red;
                 text-align: center;
+                border: 1px solid yellow;
             }
-            .col-lg-4{
-                border: 2px solid lime;
+            .col-8{
                 text-align: center;
-            }
-            .col-lg-8{
-                border: 2px solid purple;
-                text-align: center;
+                border: 1px solid yellow;
             }
         </style>
         </head>
     <body>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4">column 1</div>
-                <div class="col-lg-8">column 2</div>
-                <div class="col">column 3</div>
-            </div>
+       <h3>Equal width column grid</h3>
+       <div class="container">
+        <div class="row">
+            <div class="col">Column 1</div>
+            <div class="col">Column 2</div>
+            <div class="col">Column 3</div>
         </div>
-
+       </div>
+              <div class="container">
+        <div class="row">
+            <div class="col-8">Column t</div>
+            <div class="col-6">Column y</div>
+            <div class="col-2">Column x</div>
+        </div>
+       </div>
     </body>
 </html>
