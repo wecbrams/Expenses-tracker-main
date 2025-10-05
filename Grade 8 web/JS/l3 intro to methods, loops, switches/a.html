@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Intro Objects</title>
+    </head>
+    <body>
+        <p>There are 2 ways to access object's properties</p>
+        <p id="p"></p>
+        <script>
+            var person={
+                firstname:"Ukoh",
+                gender:"Female"
+            }
+
+            document.getElementById('p').innerHTML=person.firstname +
+            " is a " + person['gender']
+
+            var v=Math.abs(20)
+            document.write("Test value : "+v +"<br>")
+            var v=Math.acos(-1)
+            document.write("Test value : "+v +"<br>")
+            var v=Math.atan(.5)
+            document.write("Test value : "+v +"<br>")
+            var v=Math.asin(1)
+            document.write("Test value : "+v +"<br>")
+            var v=Math.random()
+            document.write("Test value : "+v +"<br>")
+        </script>
+    </body>
+</html>

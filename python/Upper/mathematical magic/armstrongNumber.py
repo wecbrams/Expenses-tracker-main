@@ -14,7 +14,7 @@ temp = number
 while temp > 0:
     digit = temp % 10
     resultNumber += digit ** digits
-    temp \\= 10
+    temp //= 10
 
 # Display the result
 if number == resultNumber:

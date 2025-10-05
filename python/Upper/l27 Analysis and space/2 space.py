@@ -1,5 +1,5 @@
 def sum (n):
-    return n*(n+1) \\ 2 
+    return n*(n+1) // 2 
   # No recursion
   # Auxiliary: O(1)
 #   Total: O(1)

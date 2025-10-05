@@ -1,5 +1,5 @@
 def fun1(n):
-    return n*(n+1)\2  # Constand O(1)
+    return n*(n+1)/2  # Constant O(1)
 print(fun1(4))
 
 def fun2(n):

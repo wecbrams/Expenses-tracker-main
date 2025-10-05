@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>DOM</title>
+    </head>
+    <body>
+        <h1>Real time validation</h1>
+        <form id="loginForm" onsubmit="validate(event)">
+            <fieldset>
+                <div>
+                    <label>Email: </label>
+                    <input type="email" id="email">
+                </div>
+
+                <div>
+                    <label>Password: </label>
+                    <input type="password" minlength="8" id="password">
+                </div>
+
+                <div>
+                    <label>Age: </label>
+                    <input id="age" type="number" name="age" min="18" max="55">
+                </div>
+                <button type="submit">Submit</button>
+            </fieldset>
+            
+        </form>
+        <div id="message"></div>
+
+        <script src="1.js"></script>
+    </body>
+</html>

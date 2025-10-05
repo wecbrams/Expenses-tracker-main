@@ -1,7 +1,7 @@
 def binarySearch(arr, target, low, high):
     if low > high:
         return -1  # Base case: not found
-    mid = (low + high) \\ 2
+    mid = (low + high) // 2
     if arr[mid] == target:
         return mid
     elif target < arr[mid]:

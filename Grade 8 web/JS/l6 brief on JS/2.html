@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <TITle>Conditional statement</TITle>
+    </head>
+    <body>
+        <button onclick="funcGreet()">Try out</button>
+        <p id="ho"></p>
+        <p id="gr"></p>
+
+        <script>
+            function funcGreet(){
+                var greeting
+                var time = new Date().getHours()
+
+                if (time<10){
+                    greeting = "Good morning"
+                }
+
+                else if (time<20){
+                    greeting = "Good Day"
+                }
+                else{
+                    greeting = "Good evening"
+                }
+
+                document.getElementById('ho').innerHTML="Current hour is : " + time
+                document.getElementById('gr').innerHTML=greeting
+            }
+        </script>
+    </body>
+</html>

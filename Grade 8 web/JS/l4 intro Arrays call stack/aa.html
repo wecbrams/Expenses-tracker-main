@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>Arrays</title>
+    </head>
+    <body>
+        <p id="d"></p>
+        <p id="mj"></p>
+        <p id="fpop"></p>
+        <p id="spop"></p>
+        <p id="g"></p>
+
+        <script>
+            var cars=["codingal", 'Learning', 'coding']
+            document.getElementById('d').innerHTML=cars[2]
+
+            var fruits = ["Banana", 'Apples', 'mango','Grapes']
+            document.getElementById('mj').innerHTML=fruits.join(' **# ')
+            document.getElementById('fpop').innerHTML=fruits.pop()
+            document.getElementById('spop').innerHTML=fruits
+
+            function add (a,b){
+                return a+b
+            }
+            function average (a,b){
+                return add(a,b)/2
+            }
+            result = average(10,20)
+            document.getElementById('g').innerHTML=result
+
+        </script>
+    </body>
+</html>
