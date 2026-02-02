@@ -11,14 +11,12 @@ CREATE TABLE IF NOT EXISTS STUDENT (
 -- Insert sample data into the STUDENT table
 INSERT INTO STUDENT (ROLL_NO, NAME, ADDRESS, PHONE, AGE) VALUES
   ('1', 'RAM', 'DELHI', '*****', 18),
-  ('2', 'RAMESH', 'GURGAON', '*****', 18),
+  ('12', 'RAMESH', 'GURGAON', '*****', 18),
   ('3', 'SUJIT', 'ROHTAK', '*****', 20),
   ('4', 'SURESH', 'DELHI', '*****', 18),
   ('5', 'AMAN', 'ROHTAK', '*****', 20),
   ('6', 'HARSH', 'GURGAON', '*****', 18);
 
--- Select all records from the Salesman table to verify insertion (if required)
--- SELECT * FROM Salesman;
 
 -- Select all records from the STUDENT table to verify insertion
 SELECT * FROM STUDENT;
@@ -38,6 +36,10 @@ SELECT * FROM STUDENT WHERE NAME = 'RAM' OR AGE = 20;
 
 -- Query students aged 18 and named Ram or Ramesh
 SELECT * FROM STUDENT WHERE AGE = 18 AND (NAME = 'RAM' OR NAME = 'RAMESH');
+
+SELECT min(age),name FROM student;
+SELECT max(age),name FROM student;
+
 
 CREATE TABLE IF NOT EXISTS PRODUCT(
   PRO_ID TEXT PRIMARY KEY,

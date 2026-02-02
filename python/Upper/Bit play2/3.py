@@ -18,7 +18,7 @@ def TwoOdd(arr, size):
 arr = []
 arr_size = int(input("Enter the size of the array"))
 for i in range(0,arr_size):
-  z = int(input("Enter element"))
+  z = int(input("Enter element: "))
   arr.append(z)
 
 TwoOdd(arr, arr_size)

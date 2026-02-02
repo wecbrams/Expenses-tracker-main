@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>Bootstrap containers</title>
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+      <style>
+        body{
+            background: #f5f5f5;
+            .section-title{
+                font-size: 1.5rem;
+                font-weight: bold;
+                margin-top: 20px;
+                border-left: 5px solid white;
+                padding-left: 10px;
+            }
+            .activity-border .container{
+                margin-top: 20px;
+                padding: 20px;
+                border-radius: 8px;
+
+            }
+        }
+      </style>
+    </head>
+    <body>
+        <div class="container bg-primary">
+            <h1 class="text-centre">Bootstrap containers</h1>
+            <p class="text-centre">This project teaches <strong>Bootstrap container</strong></p>
+
+            <div class="section-title">Topics Introduced</div>
+            <ul>
+                <li>containers</li>
+                <li>container-fluid</li>
+                <li>container-breakpoint</li>
+            </ul>
+        </div>
+        <div class="container-fluid bg-warning">
+            <h3>Full Width Container</h3>
+            <p>This container spans width of the entire screen</p>
+        </div>
+        <div class="activity-border">
+            <div class="container border border-dark bg-danger">
+                <h3>Codingal</h3>
+                <p>Making Kids fall in love with coding.</p>
+            </div>
+            <div class="container bg-success text-white border border-warning">
+                <h3>My bootstrap webpage</h3>
+                <p>This containe has a custom border, padding, color, background</p>
+            </div>
+        </div>
+    </body>
+</html>

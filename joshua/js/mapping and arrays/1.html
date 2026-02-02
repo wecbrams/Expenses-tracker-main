@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>Array and mapping</title>
+    </head>
+    <body>
+        <div class="box">
+            <h2>Array Sorting</h2>
+            <p>Click the buttons below to sort arrays:</p>
+            <button onclick="ascending()">Ascending order</button>
+            <button onclick="descending()">Descending order</button>
+            <p id="sort_result"></p>
+        </div>
+
+        <div class="box">
+            <h2>Multiply Array Elements</h2>
+            <p id="product_value"></p>
+        </div>
+        <div class="box">
+            <h2>Evaluate JS Expressions</h2>
+            <button onclick="runEval()">Try it</button>
+            <p id="eval_result"></p>
+        </div>
+        <script>
+            let points=[40,100,1,5,25,10]
+            document.getElementById("sort_result").innerHTML = points;
+
+            function ascending(){
+                points.sort(function(a,b){return a-b})
+                document.getElementById("sort_result").innerHTML = points
+            }
+            function descending(){
+                points.sort((a,b)=>b-a)
+                document.getElementById("sort_result").innerHTML = points
+            }
+            let num=[28,6,19,95]
+            let newArray =num.map(num => num *10)
+            document.getElementById("product_value").innerHTML = newArray
+
+            function runEval(){
+                let x=10
+                let y=20
+
+                let a=eval("x+y") + "<br>"
+                let b=eval("2 *5") + "<br>"
+
+                let c ="Error: Invalid expression 'yx'<br>"
+                document.getElementById("eval_result").innerHTML = a+b+c
+                
+            }
+
+
+
+        </script>
+    </body>
+</html>

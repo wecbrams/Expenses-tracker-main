@@ -1,0 +1,47 @@
+.pimg3{
+    position: relative;
+    opacity: 0.7;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToPYFUMkO4Rb2wcWoNgS2vOKZEzISTEgUqVQ&s');
+    min-height: 400px;
+}
+section{
+    text-align: center;
+    padding: 50px 80px;
+}
+.section-dark{
+    background-color: darkcyan;
+    color:yellow;
+}
+.ptext{
+    position: absolute;
+    top:50%;
+    width: 100%;
+    text-align: center;
+    color: black;
+    font-size: 30px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+}
+.title{
+    display: block;
+    font-size: 40px;
+    margin: 20px auto;
+    text-align: center;
+}
+.border{
+    background-color: #111;
+    color: #fff;
+    padding: 20px;
+}
+.border .trans{
+    background-color: transparent;
+}
+@media(max-width:568px){
+    .pimg3{
+        background-attachment: scroll;
+    }
+}

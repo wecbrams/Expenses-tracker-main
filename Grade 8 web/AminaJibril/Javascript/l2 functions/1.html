@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>js FUNCTIONS</title>
+</head>
+<body>
+    <button onclick="mult(8)">Execute</button>
+    <span id="p"></span>
+    <button onclick="mt()">variables</button>
+    <p id="i"></p>
+    <p id="y"></p>
+    <h1 style="color:purple;">Codingal functions</h1>
+    <p id="r"></p>
+    <script>
+        function mult(x,y){
+            if(y==undefined){
+                y=5
+            }
+            document.getElementById("p").innerHTML=x*y
+
+        }
+        var a=7 // global
+        function mt(){
+            var u = 2 // local
+            document.getElementById("i").innerHTML=a*u
+        }
+        document.getElementById("y").innerHTML=a
+
+        var result = function (a,b){return a*b}
+        document.getElementById("r").innerHTML=result(5,9)
+
+    </script>
+</body>
+</html>

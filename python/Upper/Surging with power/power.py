@@ -4,7 +4,7 @@ def computePower(x, y):
         if y % 2 == 1:  # If y is odd
             result = result * x
         x = x * x       # Square the base
-        y = y \\ 2      # Divide the power by 2
+        y = y //2      # Divide the power by 2
     return result
 
 x = int(input("Enter base (x): "))

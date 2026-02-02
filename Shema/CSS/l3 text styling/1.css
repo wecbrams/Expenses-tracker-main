@@ -1,0 +1,43 @@
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    background: linear-gradient(red, yellow,brown);
+    color: white;
+    
+}
+h1{
+    text-decoration: overline;
+    text-transform: capitalize;
+    font-size: 40px;
+    color: lime;
+}
+h2{
+    text-decoration: underline;
+    font-size: 30px;
+    color: aqua;
+    text-transform: uppercase;
+}
+h3{
+    text-decoration: line-through; ;
+    font-size: 20px;
+    text-transform: lowercase;
+    color: pink;
+}
+p{
+    font-size: 20px;
+    color: white;
+}
+.fancy-text{
+    color:blue;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 24px;
+}
+.box{
+    text-shadow: 6px 6px 3px black;
+    box-shadow: 10px 10px 5px grey;
+}
+#t{
+    transform: rotate(180deg);
+    background-color: chocolate;
+    color: white;
+}

@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <title>Box and Float</title>
+        <style>
+    body {
+        font-family: "Segoe UI", Arial, sans-serif;
+        background: #f5f5f7;
+        padding: 20px;
+        line-height: 1.7;
+    }
+
+    h1, h2 {
+        text-align: center;
+        color: #333;
+    }
+
+    /* Floating boxes */
+    .fl {
+        float: left;
+        width: 180px;
+        background: #4caf50;
+        color: white;
+        padding: 15px;
+        margin: 10px 20px 10px 0;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px yellowgreen;
+        font-weight: bold;
+    }
+
+    .fr {
+        float: right;
+        width: 180px;
+        background: #2196f3;
+        color: white;
+        padding: 15px;
+        margin: 10px 0 10px 20px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+        font-weight: bold;
+    }
+
+    /* Container for the floating example */
+    .flco {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px lime;
+        max-width: 800px;
+        margin: 20px auto;
+    }
+
+    /* Clear fix */
+    .clear {
+        clear: both;
+    }
+        </style>
+    </head>
+    <body>
+        <h1>Floating Content (Non-images)</h1>
+        <div class="flco">
+            <h2>Float left and Float Right Txt Blocks</h2>
+            <div class="fl">
+                Float left Content
+                <br><small>Content flows this content</small>
+            </div>
+            <div class="fr">
+                Float Right Content
+                <br><small>Content flows this content too</small>
+            </div>
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque deleniti eveniet dicta nobis inventore excepturi! Sequi blanditiis ipsum rem illum adipisci mollitia nemo, modi magnam aspernatur beatae aperiam iste sit.
+        Eum, doloribus iusto. Error corporis quasi dolores qui debitis libero, facere delectus aperiam autem nobis, voluptatum doloremque pariatur nesciunt! Reprehenderit accusantium exercitationem natus maiores rerum commodi illo quod laborum dolore!</p>
+    <p>lError corporis quasi dolores qui debitis libero,</p>
+    <div class="clear"></div>
+    </body>
+</html>

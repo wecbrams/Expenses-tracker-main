@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>Array</title>
+    </head>
+    <body>
+        <p>Click the button to sort in ascending and descending order</p>
+        <button onclick="asc()">Ascending order</button>
+        <button onclick="desc()">Decending order</button>
+        <p id="re"></p>
+        <p id="yes"></p>
+        <script>
+            var points = [40,100,2,10,50,4,5,9]
+            document.getElementById('re').innerHTML=points
+            function asc(){
+                points.sort(function(a,b){return a-b})
+                document.getElementById('re').innerHTML=points
+
+            }
+            function desc(){
+                points.sort(function(a,b){return b-a})
+                document.getElementById('re').innerHTML=points
+            }
+
+            // MApping 
+            function map1(num){
+                return num*10
+            }
+            var newv=points.map(map1)
+            document.getElementById('yes').innerHTML=newv
+
+            
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,63 @@
+<html>
+<head>
+  <title>JavaScript Examples</title>
+</head>
+
+<body style="font-family: Arial; background:#f4f4f4; padding:20px;">
+
+  <!-- STRING METHODS -->
+  <h2>JavaScript String Methods</h2>
+  <p>
+    Search a string for <b>"doing"</b>, display the position of the match,
+    replace the word <b>"how are"</b> with <b>"how are you"</b>,
+    and show string concatenation.
+  </p>
+
+  <p><b>Search Result:</b> <span id="search_result"></span></p>
+  <p><b>Replace Result:</b> <span id="replace_result"></span></p>
+  <p><b>String Concatenation:</b> <span id="string_result"></span></p>
+
+  <hr>
+
+  <!-- ERROR HANDLING -->
+  <h2>JavaScript Error Handling</h2>
+  <p>This example demonstrates how to use <b>try</b> and <b>catch</b>.</p>
+
+  <p><b>Error Message:</b> <span id="error_message"></span></p>
+
+  <hr>
+
+  <!-- ARROW FUNCTION -->
+  <h2>JavaScript Arrow Function</h2>
+  <p>This example shows an Arrow Function with parameters.</p>
+
+  <p><b>Arrow Function Result:</b> <span id="result"></span></p>
+
+  <!-- JAVASCRIPT -->
+  <script>
+    // STRING METHODS
+    var str = "hello how are doing for the day";
+    var search_position = str.search("doing");
+    var replaced_text = str.replace("how are", "how are you");
+
+    var x = 70;
+    var y = 90;
+
+    document.getElementById("search_result").innerHTML = search_position;
+    document.getElementById("replace_result").innerHTML = replaced_text;
+    document.getElementById("string_result").innerHTML = String(x) + String(y);
+
+    // ERROR HANDLING
+    try {
+      addalert("Welcome guest!");
+    } catch (err) {
+      document.getElementById("error_message").innerHTML = err.message;
+    }
+
+    // ARROW FUNCTION
+    const add = (a, b) => a + b;
+    document.getElementById("result").innerHTML = add(4, 6);
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+<html>
+    <head>
+        <title>JSON</title>
+    </head>
+    <body>
+        <p id="u"></p>
+        <script>
+            var mj={name:"Lewis", age:13, grade:9}
+            var mJSON = JSON.stringify(mj)  // sending Data
+            var newO= JSON.parse(mJSON)  //receiving data
+
+            document.getElementById('u').innerHTML=newO.name
+        </script>
+    </body>
+</html>

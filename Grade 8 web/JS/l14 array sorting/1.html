@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>Array sorting</title>
+    </head>
+    <body>
+        <p>Click the button to sort arrays: </p>
+        <button onclick="asc()">Ascending </button>
+        <button onclick="desc()">Descending </button>
+        <p id="rs"></p>
+        <p id="r"></p>
+
+        <script>
+            var points=[10,2,4,69,80,40,3]
+            document.getElementById('rs').innerHTML=points
+            function asc(){
+                points.sort(function (a,b){return a-b})
+                document.getElementById('rs').innerHTML=points
+            }
+            function desc(){
+                points.sort(function (a,b){return b-a})
+                document.getElementById('rs').innerHTML=points
+            }
+
+            // Array mapping
+            function newarray(num){
+                return num*10
+            }
+            var newarray=points.map(newarray)
+                document.getElementById('r').innerHTML=newarray            
+        </script>
+    </body>
+</html>

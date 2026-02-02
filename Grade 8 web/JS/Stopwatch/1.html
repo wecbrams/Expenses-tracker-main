@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>Stopwatch</title>
+        <style>
+            body{text-align: center; background-color: lime;}
+            p{font-size: 40px; margin: 25px 0;}
+            button{margin: 7px;padding:8px 16px}
+        </style>
+    </head>
+    <body>
+        <div class="wrapper">
+            <h1>Stowatch</h1>
+            <p><span id="sec">00</span> : <span id="ms">00</span></p>
+            <button id="start">Start</button>
+            <button id="stop">Stop</button>
+            <button id="reset">Reset</button>
+
+            <script>
+                let sec = 0, ms=0, timer
+                const s= id=>document.getElementById(id)
+
+                s("start").onclick=()=>{
+                    clearInterval(timer)
+                    timer = setInterval(()=>{
+                        ms++
+                        if (ms>99){
+                            sec++
+                            ms=0
+                        }
+                        s("ms").innerText = ms.toString().padStart(2,"0")
+                        s("sec").innerText = sec.toString().padStart(2,"0")
+                    }, 10
+                )
+                }
+
+                s("stop").onclick=()=>clearInterval(timer)
+                s("reset").onclick=()=>{
+                    clearInterval(timer)
+                    sec=ms=0
+                    s("ms").innerText = s("sec").innerText ="00"
+                }
+            </script>
+        </div>
+    </body>
+</html>

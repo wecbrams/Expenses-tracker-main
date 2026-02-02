@@ -1,0 +1,85 @@
+
+<html>
+<head>
+    <title>JSON</title>
+</head>
+<body>
+    <div class="box">
+        <h2>JSON (Send and Receive Data)</h2>
+        <p id="jsonResult"></p>
+    </div>
+
+    <div class="box">
+        <h2>Callback functions</h2>
+        <p id="callbackResult"></p>
+    </div>
+
+    <div class="box">
+        <h2>Promise</h2>
+        <p id="promiseResult"></p>
+    </div>
+
+    <div class="box">
+        <h2>Async /Await</h2>
+        <p id="asyncResult"></p>
+    </div>
+    <script>
+        const student = {
+            name: "Riya",
+            age: 12,
+            grade: 7
+        };
+
+        // Convert object to JSON string (sending)
+        const jsonData = JSON.stringify(student);
+
+        // Convert JSON string back to object (receiving)
+        const receivedData = JSON.parse(jsonData);
+
+        document.getElementById("jsonResult").innerHTML =
+            `Name: ${receivedData.name}, Age: ${receivedData.age}, Grade: ${receivedData.grade}`;
+  
+            // 2. Callback Example
+        function displayCallbackResult(result) {
+            document.getElementById("callbackResult").innerHTML =
+            "Sum using Callback: " + result;
+        }
+
+        function calculateSum(a, b, callback) {
+            let sum = a + b;
+            callback(sum); // callback function call
+        }
+
+        calculateSum(10, 20, displayCallbackResult);
+
+            // 3. Promise Example
+        const myPromise = new Promise((resolve, reject) => {
+            let success = true; // change to false to see error
+
+            if (success) {
+            resolve("Promise resolved successfully!");
+            } else {
+            reject("Promise rejected!");
+            }
+        });
+        myPromise
+            .then(message => {
+            document.getElementById("promiseResult").innerHTML = message;
+            })
+            .catch(error => {
+            document.getElementById("promiseResult").innerHTML = error;
+            });
+            // 4. Async / Await Example
+        async function addNumbers(a, b) {
+            return a + b;
+        }
+        async function showAsyncResult() {
+            const result = await addNumbers(25, 30);
+            document.getElementById("asyncResult").innerHTML =
+            "Sum using Async/Await: " + result;
+        }
+
+        showAsyncResult();
+    </script>
+</body>
+</html>

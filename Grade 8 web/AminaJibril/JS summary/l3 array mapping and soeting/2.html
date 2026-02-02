@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Js Array sort</h2>
+    <p>Click to sort Arrays in order</p>
+    <button onclick="ascending()">Ascending Order</button>
+    <button onclick="descending()">Descending Order</button>
+    <!-- <button onclick="mapping()">Map function</button> -->
+    <p id="re"> </p> <span id="mapp"></span>
+    <script>
+        var points = [140,1,7,3,2,600,20,10]
+        document.getElementById("re").innerHTML=points
+
+        function ascending(){
+            points.sort(function(a,b){return (a-b)})
+        document.getElementById("re").innerHTML=points
+
+        }
+        function descending(){
+            points.sort(function(a,b){return (b-a)})
+        document.getElementById("re").innerHTML=points
+
+        }
+        function mapping(num){
+            return num *15
+        }
+        var newPoints = points.map(mapping)
+        document.getElementById("mapp").innerHTML=newPoints
+
+    </script>
+</body>
+</html>

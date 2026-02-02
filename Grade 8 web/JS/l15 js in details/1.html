@@ -1,0 +1,21 @@
+<html>
+<head>  
+    <title>JS error and arrow functions</title>
+</head>
+<body>
+    <h1>JS Error handling</h1>
+    <p id="er"></p>
+    <p id="arr"></p>
+    <script>
+        try{
+            addalert("Welcome guest!")
+        }
+        catch(err){
+            document.getElementById("er").innerHTML=err.message
+        }
+
+        add=(a,b) =>a+b
+        document.getElementById('arr').innerHTML=add(4,6)
+    </script>
+</body>
+</html>

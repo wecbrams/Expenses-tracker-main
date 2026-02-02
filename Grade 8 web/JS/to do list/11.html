@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>To-Do-List</title>
+    </head>
+    <body>
+        <h2>Add your To-Do-List</h2>
+        <form id="f">
+            <input type="text" id="i" placeholder="New Task....">
+            <button>Add</button>
+        </form>
+        <h3>To-Do-List</h3>
+        <ul id="l"></ul>
+
+        <script>
+            const f=document.getElementById('f');
+            const i=document.getElementById('i');       
+            const l=document.getElementById('l');
+            f.addEventListener('submit',e=>{
+                e.preventDefault();
+                if(!i.value.trim()) return
+                l.insertAdjacentHTML('beforeend',`<li>${i.value.trim()}
+                <button onclick="this.parentElement.remove()">X</button></li>`)
+                i.value='';
+                i.focus();
+            })
+        </script>
+    </body>
+</html>

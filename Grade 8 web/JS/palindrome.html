@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>Palindrome app</title>
+    </head>
+    <body>
+        <h1>Palindrome Checker</h1>
+        <input type="text" id="inputString" placeholder="Enter a string">
+        <button onclick="checkPalindrome()">Check</button> <br><br>
+        <p id="result"></p>
+
+        <script>
+            function Palindrome(myString){
+                var input =myString.replace(/[^A-Z0-9]/ig, '').toLowerCase();
+                var reversed =input.split('').reverse().join('');
+                if(input === reversed){
+                    return `${myString} is a palindrome`;
+                } else {
+                    return `${myString} is not a palindrome`;
+                }
+            }
+            function checkPalindrome(){
+                var userInput =document.getElementById('inputString').value;
+                if(userInput.trim() === ''){
+                    document.getElementById('result').innerText='Please enter a valid string.';
+                    return;
+                }
+                var result =Palindrome(userInput);
+                document.getElementById('result').innerText=result;
+            }
+        </script>
+    </body>
+</html>

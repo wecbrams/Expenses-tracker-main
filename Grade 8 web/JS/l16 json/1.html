@@ -1,0 +1,49 @@
+<!-- <html>
+    <head>
+        <title>JSON</title>
+    </head>
+    <body>
+        <p id="u"></p>
+        <p id="a"></p>
+        <script>
+            var mO={name:'Ali',age:16, grade:12}
+            var mJ=JSON.stringify(mO)
+            var newM=JSON.parse(mJ)
+            document.getElementById('u').innerHTML=newM.name
+
+            async function add(a,b){
+                let response=await a+b
+                display(response)
+            }
+            function display(some){
+                document.getElementById('a').innerHTML=some
+            }
+            add(5,20)
+        </script>
+    </body>
+</html> -->
+
+<html>
+    <head>
+        <title>JSON</title>
+    </head>
+    <body>
+        <p id="u"></p>
+        <p id="a"></p>
+        <script>
+            var mO={name:'Ali',age:16,grade:12}
+            var mJ=JSON.stringify(mO)
+            var newM=JSON.parse(mJ)
+            document.getElementById('u').innerHTML=newM.name
+
+            async function add(a,b){
+                let response=await a+b 
+                display(response)
+            }
+            function display(some){
+                document.getElementById('a').innerHTML=some
+            }
+            add(5,20)
+        </script>
+    </body>
+</html>

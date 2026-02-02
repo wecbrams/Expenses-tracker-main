@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Palindrome app</title>
+    <style>
+        body{
+            background: linear-gradient(135deg,#667eea,#764ba2);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+        }
+        .container{
+            background:white;
+            padding: 30px;
+            width: 350px;
+            border-radius: 10px;
+            text-align: center;
+
+        }
+        button{
+            background-color: #667eea;
+            color:white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: #5563c1;
+        }
+        #result{
+            margin-top: 15px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Palindrome App</h1>
+        <input type="text" id="inputtext" placeholder="Enter a word or sentence">
+        <button onclick="checkPalindrome()">Check</button>
+        <p id="result"></p>
+
+    </div>
+    <script>
+        function checkPalindrome(){
+            const text=document.getElementById("inputtext").value 
+            const result=document.getElementById("result")
+
+            if(text.trim()==""){
+                result.textContent="Please enter some text."
+                result.style.color="red"
+                return
+            }
+            const cleanedText=text.replace(/[^A-Z0-9]/gi,"").toLowerCase()
+            const reversedText=cleanedText.split("").reverse().join("")
+
+            if(cleanedText==reversedText){
+                result.textContent=`"${text}" is a palindrome`
+                result.style.color="green"
+
+            }else{
+                {
+                result.textContent=`"${text}" is not a palindrome`
+                result.style.color="red"
+
+            }
+            }
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Array</title>
+</head>
+<body>
+    <button onclick="asc()">Ascending order</button>
+    <button onclick="desc()">Decending order</button>
+    <p id="r"></p>
+    <p id="y"></p>
+
+
+
+    <script>
+        var points=[40,50,20,90,5,2,1,100,500,7]
+        document.getElementById('r').innerHTML = points
+
+        function asc(){
+            points.sort(function(a,b){return a-b})
+            document.getElementById('r').innerHTML = points
+
+        }
+        function desc(){
+            points.sort(function(a,b){return b-a})
+            document.getElementById('r').innerHTML = points
+
+        }
+
+        function mp(num){
+            return num * 10
+        }
+        var nA=points.map(mp)
+        document.getElementById('y').innerHTML =nA
+
+
+    </script>
+</body>
+</html>

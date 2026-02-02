@@ -1,0 +1,86 @@
+<html>
+    <head>
+        <title>Classes</title>
+    </head>
+<body>
+
+        <h2>JavaScript Classes, Inheritance & Static Methods</h2>
+
+        <p id="student1"></p>
+        <p id="student2"></p>
+        <p id="carDetails"></p>
+        <p id="hello"></p>
+        <p id="hi"></p>
+        <p id="welcome"></p>
+
+        <script>
+
+        // Student Class
+        class Student {
+        constructor(name, year) {
+            this.name = name;
+            this.year = year;
+        }
+        
+        age() {
+            const currentYear = new Date().getFullYear();
+            return currentYear - this.year;
+        }
+
+        hi() {
+            return "Hi, I am " + this.name;
+        }
+
+        // static method
+        static hello() {
+            return "Hello from the Student class!";
+        }
+
+        // static method with parameter
+        static welcome(studentObj) {
+            return "Welcome " + studentObj.name;
+        }
+        }
+        // Creating Student objects
+        let s1 = new Student("Rim", 2014);
+        let s2 = new Student("Tina", 2018);
+
+        document.getElementById("student1").innerHTML =
+        "My name is " + s1.name + ", I was born in " + s1.year +
+        ", and my age is " + s1.age();
+
+        document.getElementById("student2").innerHTML =
+        "My name is " + s2.name + ", I was born in " + s2.year +
+        ", and my age is " + s2.age();
+
+        // Car Class + Inheritance Example
+        class Car {
+        constructor(brand) {
+            this.brand = brand;
+        }
+        present() {
+            return "I have a " + this.brand;
+        }
+        }
+        class Model extends Car {
+        constructor(brand, model) {
+            super(brand);      // calls Car constructor
+            this.model = model;
+        }
+        show() {
+            return this.present() + ", it is a " + this.model;
+        }
+        }
+        let myCar = new Model("Ford", "Mustang");
+
+        document.getElementById("carDetails").innerHTML = myCar.show();
+        // Static method calls
+        // ---------------------------
+        document.getElementById("hello").innerHTML = Student.hello();
+        document.getElementById("hi").innerHTML = s1.hi();
+        document.getElementById("welcome").innerHTML = Student.welcome(s2);
+
+    </script>
+
+</body>
+</html>

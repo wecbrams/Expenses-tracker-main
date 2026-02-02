@@ -3,8 +3,7 @@ print("Hello! I am AI BOT.")
 name= input("What is you name? : ")
 print("Nice to meet you, ",name)
 
-print("How are you feeling today? (good/bad) : ")
-mood = input().lower()
+mood = input("How are you feeling today? (good/bad) : ").lower()
 
 if mood=="good":
     print("I'm glad to hear that!")

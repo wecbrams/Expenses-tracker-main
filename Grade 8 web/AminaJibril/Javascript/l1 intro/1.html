@@ -1,0 +1,29 @@
+<html>
+<head>  
+     <title>Intro to JS</title>
+</head>
+<body>
+    <h1 id="h"></h1>
+    <h3 id="hello"></h3>
+    <p id="p"></p>
+    <h4>Variables and operators</h4>
+    <p id="result"></p>
+    <p id="op"></p>
+
+    <script>
+        document.getElementById('h').innerHTML="Welcome to Javascript"
+        document.getElementById('hello').innerHTML="Welcome to Javascript"
+        document.getElementById('p').innerHTML="Welcome to Javascript"
+
+        var num=5   // statement
+        var num2=7  // statement
+        var sum=num+num2 // statement
+
+        document.getElementById("result").innerHTML="The total sum is: "+ sum
+
+        num2 *=9 // statement
+        document.getElementById('op').innerHTML="The new value of num2 is: "+num2
+        
+    </script>
+</body>
+</html>

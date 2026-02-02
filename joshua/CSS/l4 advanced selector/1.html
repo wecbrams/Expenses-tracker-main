@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <title>Advanced selectors</title>
+        <style>
+            /* Attribute selector */
+            input[type="text"]{
+                border: 2px solid blue;
+            }
+
+            input[type="password"]{
+                border: 2px solid red;
+            }
+
+            /* Child selector  */
+
+            ul > li{
+                color: green;
+            }
+
+            ul + p{
+                color: red;
+            }
+
+            a:hover{
+                color: brown;
+                background-color: aqua;
+            }
+
+            li:nth-child(3){
+                color: blue;
+            }
+
+            h1::before{
+                content: "🌓";
+            }
+            h1::after{
+                content: "🚀";
+            }
+        </style>
+    </head>
+    <body>
+        <input type="text" placeholder="Text input"> <br> <br>
+        <input type="password" placeholder="Password input">
+
+        <ul>
+            <li>First</li>
+            <li>Second</li>
+            <li>Third</li>
+        </ul>
+
+        <p>HEllo</p>
+        <p>how are you</p>
+
+        <a href="#">Click here</a>
+        <h1>To the moon</h1>
+
+
+    </body>
+</html>

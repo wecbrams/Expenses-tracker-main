@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <h1>Js objects</h1>
+    <p id="ob"></p>
+    <h3>Max</h3>
+    <p id="i"></p>
+    <script>
+        var person={
+            name:"Ali",
+            age:17
+        }
+        document.getElementById("ob").innerHTML=person.name+" is "+person["age"]+" Years old"
+        var value=Math.abs(20)
+        document.write("The test value: "+value + "<br>")
+        var value=Math.acos(-1)
+        document.write("The test value: "+value+ "<br>")
+        var value=Math.asin(1)
+        document.write("The test value: "+value+ "<br>")
+        var value=Math.atan(.5)
+        document.write("The test value: "+value+ "<br>")
+        var value=Math.random()
+        document.write("The test value: "+value+ "<br>")
+
+        function findmax(){
+            var i
+            var max=0
+            for (i=0; i<arguments.length;i++){
+                if(arguments[i]>max){
+                    max =arguments[i]
+                }  
+            }
+            return max
+        }
+        document.getElementById("i").innerHTML=findmax(6,1,4,2,9,7,990)
+    </script>
+</body>
+</html>

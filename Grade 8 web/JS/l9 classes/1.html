@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Js Classes</title>
+    </head>
+    <body>
+        <p id="std1"></p>
+        <p id="std2"></p>
+
+        <script>
+            //creating a class
+            class student{
+                constructor (name, year){
+                    this.name = name
+                    this.year= year
+                }
+
+                age(){
+                    let date = new Date()
+                    return date.getFullYear()-this.year
+                }
+            }
+
+            student1 = new student('Lewis', 2015)
+            student2 = new student('Ali', 2017)
+            document.getElementById("std1").innerHTML= "My name is " +
+            student1.name + " I was born in " + student1.year + " and I am "+
+            student1.age()
+
+            document.getElementById("std2").innerHTML="My name is " + student2.name + " I was born in " + student2.year + " and I am "+
+            student2.age()
+        </script>
+    </body>
+</html>

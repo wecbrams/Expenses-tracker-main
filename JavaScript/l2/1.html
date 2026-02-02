@@ -1,18 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
        <title>Functions</title>
 </head>
 <body>
-    <button onclick="mult(10,5)">Execute JS Function</button>
-    <button onclick="add(10,5)">Execute JS Function</button>
-    <button onclick="subt(10,5)">Execute JS Function</button>
+    <button onclick="mult(10)">Execute JS Function Multiplication</button>
+    <button onclick="add(10,5)">Execute JS Function Add</button>
+    <button onclick="subt(10,5)">Execute JS Function </button>
+    <p id="mul"></p>
 
     <script>
+
+        y = 7  // Global variable
         function mult(a,b){
             if (b===undefined){
-                b=2
+                b=2 //local variable
+                x = 10 //local variable
             }
+            document.write(x*y+"<br>")
+            // document.getElementById("mul").innerHTML= a*b
             document.write(a*b)
         }
         function add(a,b){
@@ -27,6 +32,7 @@
             }
             document.write(a-b)
         }
+        document.write(y*x)
     </script>
 </body>
 </html>

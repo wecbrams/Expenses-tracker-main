@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>Intro to js</title>
+    </head>
+    <body>
+        <h1 id="m"></h1>
+        <p id="p"></p>
+
+        <h1>JS variables</h1>
+        <p id="result"></p>
+        <p id="result1"></p>
+        <p id="result2"></p>
+        <p id="result3"></p>
+
+        <script>
+            document.getElementById('m').innerHTML="Js comment in Head"
+            document.getElementById('p').innerHTML="Js comment in paragraph"
+
+            var num1 = 5 // statement
+            var num2 = 7 // statement
+
+            var sum=num1+num2 // statement
+            document.getElementById("result").innerHTML="The total sum is: "+sum
+            
+            var sub=num1-num2 // statement
+            document.getElementById("result1").innerHTML="The total sub is: "+sub
+            var mult=num1*num2 // statement
+            document.getElementById("result2").innerHTML="The total mult is: "+mult
+        </script>
+    </body>
+</html>

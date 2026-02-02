@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Arguments</title>
+</head>
+<body>
+    <p>Finding the largest number with the help of arguments</p>
+    <p id="re"></p>
+    <script>
+        function finMax(){
+            var i
+            var max=0
+            for (i=0;i<arguments.length;i++){
+                if(arguments[i]>max){
+                    max=arguments[i]
+                }
+            }
+            return max
+        }
+        document.getElementById("re").innerHTML=finMax(8,9,0.5,1,0,2,89,3,6)
+    </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <title>Digital Clock</title>
+        <style>
+            body {
+                margin: 0;
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: linear-gradient(135deg, #1e1e2f, #2a2a40);
+                font-family: "Segoe UI", sans-serif;
+            }
+
+            #myClockDisplay {
+                color: #00ffea;
+                font-size: 80px;
+                font-weight: bold;
+                padding: 25px 40px;
+                background: rgba(0, 0, 0, 0.3);
+                border-radius: 15px;
+                box-shadow: 0 0 20px #00ffe0;
+                letter-spacing: 3px;
+                text-shadow: 0 0 20px rgba(0, 255, 234, 0.8);
+                animation: glow 2s infinite alternate;
+            }
+
+            @keyframes glow {
+                from {
+                    box-shadow: 0 0 10px #00ffe0;
+                }
+                to {
+                    box-shadow: 0 0 30px #00ffe0;
+                }
+            }
+    </style>
+    </head>
+    <body onload="showClock()">
+        <div id="myClockDisplay"></div>
+        <script>
+            function showClock(){
+                const date= new Date()
+                let h=date.getHours()
+                let m=date.getMinutes()
+                let s=date.getSeconds()
+                let session="AM"
+
+                if(h==0)h=12
+                if(h>12){
+                    h=h-12
+                    session="PM"
+                }
+                h = (h<10)? "0" +h :h
+                m = (m<10)? "0"+m : m
+                s = (s<10)? "0" +s : s
+
+                const time = `${h}: ${m}: ${s} ${session}`
+                document.getElementById("myClockDisplay").textContent = time
+
+                setTimeout(showClock,1000)
+            }
+        </script>
+        
+    </body>
+</html>

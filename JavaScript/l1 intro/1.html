@@ -1,14 +1,22 @@
-<!DOCTYPE html>
 <html>
+	<head>
+		<title>Intro to html</title>
+	</head>
 <body>
 	<h1 id="i"></h1>
 	<p id="myP"></p>
+	<p id="sum"></p>
+	<p id="mult"></p>
     
 	<script>
 	// My heading:
     document.getElementById("i").innerHTML = "JavaScript Comments";
     // My paragraph:
     document.getElementById("myP").innerHTML = "My first paragraph.";
+	var x=5  // statement
+	var y=10  // statement
+	document.getElementById("sum").innerHTML="The sum of x and y is: " + (x + y);
+	document.getElementById("mult").innerHTML="The Multiplication of x and y is: " + (x * y);
 	</script>
 </body>
 </html>

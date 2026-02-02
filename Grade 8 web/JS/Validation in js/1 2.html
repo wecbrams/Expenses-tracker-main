@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>Validation Form</title>
+    </head>
+
+    <body>
+
+    <h2>Validation Demo</h2>
+
+        <!-- Name Form -->
+        <form onsubmit="validateNameForm(event)">
+            <label>Enter your name:</label><br>
+            <input type="text" id="fname" placeholder="Your name..."><br><br>
+            <input type="submit" value="Submit Name"><br>
+            <p id="nameMessage"></p>
+        </form>
+
+        <hr>
+
+        <!-- Number Validation -->
+        <label>Enter a number between 100 and 300:</label><br>
+        <input id="id1" type="number" min="100" max="300" required><br><br>
+        <button onclick="validateNumber()">Check Number</button>
+        <p id="numMessage"></p>
+
+        <script>
+            function validateNameForm(event) {
+                event.preventDefault(); // prevent page reload
+                var name = document.getElementById("fname").value;
+
+                if (name === "") {
+                    document.getElementById("nameMessage").innerHTML = "Name must be filled out!";
+                    alert("Name must be filled out!");
+                } else {
+                    document.getElementById("nameMessage").innerHTML = "Name submitted successfully!";
+                    alert("Name submitted successfully!");
+                }
+            }
+
+            function validateNumber() {
+                var numberInput = document.getElementById("id1");
+
+                if (!numberInput.checkValidity()) {
+                    document.getElementById("numMessage").innerHTML = numberInput.validationMessage;
+                } else {
+                    document.getElementById("numMessage").innerHTML = "Input OK!";
+                }
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,29 @@
+<html>
+<head>
+    <title>Conditional statment</title>
+</head>
+<body>
+    <p>Click on the button for time-based greeting</p>
+    <button onclick="mf()">Try it</button>
+    <p id="hour"></p>
+    <p id="greeting"></p>
+    <script>
+        function mf(){
+            var greeting
+            var time=new Date().getHours()
+
+            if (time <10){
+                greeting ="Good Morning"
+            }
+            else if (time<20){
+                greeting ="Good day"
+            }
+            else{
+                greeting = "Good Evening"
+            }
+            document.getElementById("hour").innerHTML="Current hour is: "+time
+            document.getElementById("greeting").innerHTML=greeting
+        }
+    </script>
+</body>
+</html>
