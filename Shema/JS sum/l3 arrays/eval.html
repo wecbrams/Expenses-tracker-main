@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluation</title>
+</head>
+<body>
+    <p>Click the button to evaluate Js expression</p>
+    <button onclick="ev()">Try it</button>
+    <p id="result"></p>
+    <script>
+        function ev(){
+            var x= 9
+            var y = 5
+
+            var a=eval("x+y")+ " <br>"
+            var b=eval("5*9")+ " <br>"
+            var c=eval("y - x")+ " <br>"
+            var res=a+b+c
+            document.getElementById("result").innerHTML=res
+        }
+    </script>
+
+</body>
+</html>

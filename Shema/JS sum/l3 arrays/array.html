@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array and mapping</title>
+</head>
+<body>
+    <h1>Sorting of an Array</h1>
+    <h5>Click the buttons to sort</h5>
+    <button onclick="ascending()">Ascending Order</button>
+    <button onclick="descending()">Descending Order</button>
+    <p id="order"></p>
+    <hr>
+    <p id="pv"></p>
+    <script>
+        var points = [60,80,2,100,200,6,9,10,94]
+        document.getElementById("order").innerHTML=points
+        function ascending(){
+            points.sort(function(a,b){return a-b})
+            document.getElementById("order").innerHTML=points
+
+        }
+        function descending(){
+            points.sort(function(a,b){return b-a})
+            document.getElementById("order").innerHTML=points
+
+        }
+        function mu(num){
+            return num * 5
+        }
+        var newPoints= points.map(mu)
+        document.getElementById("pv").innerHTML=newPoints
+
+    </script>
+</body>
+</html>

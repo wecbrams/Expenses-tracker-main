@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rolling Dice</title>
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body{
+            text-align: center;
+
+        }
+        #dice{
+            font-size: 320px;
+        }
+        #dice:hover{
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎲Roll the Dice</h1>
+        <p>Click the dice or the button to start and Stop</p>
+        <div id="dice" onclick="startstop()">🎲</div>
+        <button onclick="startstop()">Roll / Stop</button>
+        <script>
+            let dice
+            const dices = ['&#9856;', '&#9857;', '&#9858;', '&#9859;', '&#9860;', '&#9861;']
+            let stopped = true
+            let t
+            function change(){
+                const random =Math.floor(Math.random()*6)
+                dice.innerHTML = dices[random]
+            }
+            function startstop(){
+                if(stopped){
+                    stopped = false
+                    t=setInterval(change,100)
+                }else{
+                    clearInterval(t)
+                    stopped=true
+                }
+            }
+            window.onload=function(){
+                dice = document.getElementById("dice")
+                change()
+            }
+        </script>
+    </div>
+</body>
+</html>

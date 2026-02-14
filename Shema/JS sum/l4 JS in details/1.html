@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Type conversion</h3>
+    <p id="n"></p>
+    <p id="s"></p>
+
+    <h2>Arrow Function</h2>
+    <p id="arrow"></p>
+
+    <h2>Error handling</h2>
+    <p id="err"></p>
+    <script>
+        var x=90
+        var y = 20
+        document.getElementById("n").innerHTML=x + y
+        document.getElementById("s").innerHTML=String(x) + String(y)
+
+        //Arrow function
+        const add=(a,b)=>a+b
+        document.getElementById("arrow").innerHTML=add(6,7)
+        //Error handling
+        try{
+            addalert("Welcome guest")
+        }
+        catch(er){
+        document.getElementById("err").innerHTML=er.message
+
+        }
+    </script>
+
+</body>
+</html>

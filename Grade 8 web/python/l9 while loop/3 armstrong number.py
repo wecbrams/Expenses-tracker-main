@@ -5,7 +5,7 @@ sum = 0
 
 temp = num
 while temp> 0:
-    digit = temp % 10
+    digit = temp % 10   # 153  digit = 3^3+5^3=1^3
     sum += digit**len(str(num).strip())
     temp //=10
 
