@@ -1,0 +1,96 @@
+
+<html lang="en">
+<head>
+    <title>Modern To-Do List</title>
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h2>My To-Do List</h2>
+
+    <form id="myForm">
+        <input type="text" id="inp" placeholder="Add a new task..." required>
+        <button>Add</button>
+    </form>
+
+    <ul id="myItem"></ul>
+</div>
+
+<script>
+    const myForm = document.getElementById("myForm")
+    const input = document.getElementById("inp")
+    const myItem = document.getElementById("myItem")
+
+    document.addEventListener("DOMContentLoaded", loadTasks)
+
+    myForm.addEventListener("submit", function(event){
+        event.preventDefault()
+        if(input.value.trim() === "") return
+        createItem(input.value)
+        saveTask(input.value)
+        input.value = ""
+        input.focus()
+    })
+
+    function createItem(text, completed = false) {
+        const li = document.createElement("li")
+        if(completed) li.classList.add("completed")
+
+        li.innerHTML = `
+            <span>${text}</span>
+            <div class="task-buttons">
+                <button onclick="toggleComplete(this)">✔</button>
+                <button onclick="deleteElement(this)">✖</button>
+            </div>
+        `
+        myItem.appendChild(li)
+    }
+
+    function deleteElement(element) {
+        const li = element.parentElement.parentElement
+        li.style.opacity = "0"
+        setTimeout(() => {
+            removeTask(li.querySelector("span").textContent)
+            li.remove()
+        }, 300)
+    }
+
+    function toggleComplete(element) {
+        const li = element.parentElement.parentElement
+        li.classList.toggle("completed")
+        updateStorage()
+    }
+
+    function saveTask(task) {
+        let tasks = JSON.parse(localStorage.getItem("tasks")) || []
+        tasks.push({text: task, completed: false})
+        localStorage.setItem("tasks", JSON.stringify(tasks))
+    }
+
+    function removeTask(taskText) {
+        let tasks = JSON.parse(localStorage.getItem("tasks")) || []
+        tasks = tasks.filter(task => task.text !== taskText)
+        localStorage.setItem("tasks", JSON.stringify(tasks))
+    }
+
+    function updateStorage() {
+        let tasks = []
+        document.querySelectorAll("li").forEach(li => {
+            tasks.push({
+                text: li.querySelector("span").textContent,
+                completed: li.classList.contains("completed")
+            })
+        })
+        localStorage.setItem("tasks", JSON.stringify(tasks))
+    }
+
+    function loadTasks() {
+        let tasks = JSON.parse(localStorage.getItem("tasks")) || []
+        tasks.forEach(task => createItem(task.text, task.completed))
+    }
+</script>
+
+</body>
+</html>

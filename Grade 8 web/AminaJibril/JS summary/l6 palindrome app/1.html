@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Palindrome app</title>
+     <style>
+        body{
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg,lightblue,purple);
+            height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            margin:0;
+        }
+
+        .container{
+            background:white;
+            padding:30px;
+            border-radius:10px;
+            width:350px;
+            text-align:center;
+            box-shadow:0 10px 25px black;
+        }
+
+        input{
+            width:100%;
+            padding:10px;
+            margin-bottom:15px;
+            border-radius:5px;
+            border:1px solid #ccc;
+        }
+
+        button{
+            padding:10px 15px;
+            border:none;
+            background:#667eea;
+            color:white;
+            border-radius:5px;
+            cursor:pointer;
+        }
+
+        button:hover{
+            background:#5563c1;
+        }
+
+        #result{
+            margin-top:15px;
+            font-weight:bold;
+        }
+
+        .success{
+            color:green;
+        }
+
+        .error{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Palindrome Checker</h1>
+        <input type="text" id="inputtext"
+         placeholder="Enter a word or a sentense to check">
+         <button onclick="checkPalindrome()">Check</button>
+         <p id="result"></p>
+    </div>
+    <script>
+        function checkPalindrome(){
+            const text=document.getElementById("inputtext").value
+            const result=document.getElementById("result")
+
+            if(text.trim()===""){
+                result.textContent="Please enter some text"
+                result.className="Error"
+                return
+            }
+            const cleanedText=text.replace(/[^A-Z0-9]/gi,"").toLowerCase()
+            const reversedText=cleanedText.split("").reverse().join("")
+
+            if (cleanedText===reversedText){
+                result.textContent=` "${text}" is a palindrome!`
+                return className = "Success"
+            }else{
+                result.textContent=`"${text}" is not a palindrome!`
+                return className = "Error"
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Neon Digital Clock</title>
+   <style>
+    body{
+        margin:0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background:linear-gradient(-45deg, purple,red,green,white);
+        background-size: 400% 400%;
+        animation: gradientBG 12s ease infinite;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        overflow: hidden;
+    }
+    @keyframes gradientBG {
+        0%{background-position: 0% 50%;}
+        50%{background-position: 100% 50%;}
+        100%{background-position: 0% 50%;}
+        
+    }
+    .clock-container{
+        text-align: center;
+        padding: a40px 80px;
+        border-radius: 20px;
+        backdrop-filter: blur(15px);
+        background: lime;
+        box-shadow: 0 0 40px dark;
+    }
+    #clock{
+        font-size: 100px;
+        font-weight: bolder;
+        letter-spacing: 5px;
+        animation: glow 2s infinite alternate;
+    }
+    @keyframes glow {
+        from{
+            color:blue;
+            text-shadow: 0 0 20px blue,
+            0 0 40px blue;
+        }
+        to{
+            color:yellow;
+            text-shadow: 0 0 30px yellow,
+            0 0 60px yellow;
+        }
+    }
+    .particles{
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        background: white;
+        border-radius: 50%;
+        opacity: 0.6;
+        animation: float 8s linear infinite;
+    }
+    @keyframes float {
+        from{
+            transform: translateY(100vh) scale(0.5);
+        }
+        to{
+            transform: translateY(-10vh) scale(1.2);
+        }
+        
+    }
+   </style>
+</head>
+<body onload="showClock(); createParticles()">
+    <div class="clock-container">
+        <div id="clock"></div>
+    </div>
+    <script>
+        function showClock(){
+            const now = new Date()
+            let h = now.getHours()
+            let m=now.getMinutes()
+            let  s=now.getSeconds()
+            let session = "AM"
+
+            if(h==0) h=12
+            if(h>12){
+                h-=12
+                session="PM"
+            }
+            h=(h<10) ? "0"+h : h
+            m=(m<10) ? "0"+m : m
+            s = (s < 10) ? "0" + s : s
+
+            const time =`${h} : ${m} : ${s} ${session}`
+            document.getElementById("clock").textContent= time
+
+            setTimeout(showClock,1000)
+        }
+
+        function createParticles(){
+            for(let i=0; i<40;i++){
+                const particles = document.createElement("div")
+                particles.classList.add("particles")
+                particles.style.left=Math.random()*100+"vw"
+                particles.style.animationDuration=(5+Math.random()*5)+"s"
+                particles.style.opacity=Math.random()
+                document.body.appendChild(particles)
+            }
+        }
+    </script>
+</body>
+</html>

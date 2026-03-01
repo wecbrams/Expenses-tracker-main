@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  line-height: 1.6;
+}
+
+/* HERO SECTION */
+.hero {
+  height: 100vh;
+  background: linear-gradient(black, black),
+              url('image1.jpg') center/cover no-repeat fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.hero-content p {
+  margin: 20px 0;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background: lightsalmon;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: purple;
+  transform: scale(1.1);
+}
+
+/* SECTIONS */
+.section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.section-dark {
+  background: #111;
+  color: white;
+}
+
+.section-light {
+  background: #f4f4f4;
+  color: #333;
+}
+
+/* PARALLAX */
+.parallax {
+  height: 400px;
+  background: url('image2.jpg') center/cover no-repeat fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.parallax-text {
+  font-size: 2rem;
+  color: white;
+  background: black;
+  padding: 20px 40px;
+  border-radius: 10px;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* MOBILE RESPONSIVE */
+@media(max-width:768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .parallax {
+    background-attachment: scroll;
+  }
+}

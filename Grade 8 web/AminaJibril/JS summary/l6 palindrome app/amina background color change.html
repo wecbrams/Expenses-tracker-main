@@ -1,0 +1,49 @@
+<html>
+<head>
+    <title>Background changer</title>
+    <style>
+   body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    transition: background-color 0.5s ease;
+}
+
+button {
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    mix-blend-mode: difference;
+}
+
+
+    </style>
+</head>
+<body>
+    <button id="colorButton" onclick="">Change Background Color</button>
+    
+    <script>
+        alert("This took alot of researching and copyig from videos also Mix-blend-mode super helpful and super cool")
+
+function getRandomColor() {
+    const letters = "0123456789ABCDEF";
+    let color = "#";
+    for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
+
+function changeBackgroundColor() {
+    const newColor = getRandomColor();
+    document.body.style.backgroundColor = newColor;
+}
+
+const button = document.getElementById("colorButton");
+button.addEventListener("click", changeBackgroundColor);
+
+    </script>
+</body>
+</html>

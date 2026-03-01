@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Converting the object to JSON string, and sending it to the server</h2>
+    <p id="result"></p>
+
+    <h2>JS Async / Await</h2>
+    <p id="r"></p>
+    <script>
+        var mO={name:"Rane",age:15,grade:10}
+        var mjosn=JSON.stringify(mO)  // converts object to JSON 
+        var newOj = JSON.parse(mjosn) //converts JSON  to object 
+
+        document.getElementById("result").innerHTML=newOj.name
+
+        // Async /Await 
+        async function add(a, b) {
+            let response = await a+b 
+            display(response)
+        }
+        function display(some){
+            document.getElementById("r").innerHTML=some
+        }
+
+        add(7,5)
+    </script>
+</body>
+</html>
