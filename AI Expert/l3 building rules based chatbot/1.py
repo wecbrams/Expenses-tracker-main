@@ -1,7 +1,6 @@
 import random, re
 from colorama import Fore, init
 init(autoreset=True)
-
 dest = {
     "beaches": ["Bali", "Maldives", "Phuket"],
     "mountains": ["Alps", "Rockies", "Himalayas"],

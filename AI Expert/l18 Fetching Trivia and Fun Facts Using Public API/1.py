@@ -1,4 +1,3 @@
-# trivia_quiz.py
 import requests
 import random
 import html
@@ -73,10 +72,10 @@ def ask_quiz(questions):
 
         selected = options[choice_num - 1]
         if selected == correct:
-            print("  ✅ Correct!")
+            print(" Correct!")
             score += 1
         else:
-            print(f"  ❌ Wrong. Correct answer: {correct}")
+            print(f"Wrong. Correct answer: {correct}")
 
     return score, total
 

@@ -21,16 +21,13 @@ def classify_text(text):
         "Authorization": f"Bearer {November_22}",
         "Content-Type": "application/json"
     }
-
     payload = {"inputs": text}
-
     response = requests.post(API_URL, headers=headers, json=payload)
-
     # Safe JSON handling
     try:
         return response.json()
     except ValueError:
-        print("❌ ERROR: Hugging Face returned non-JSON response:")
+        print("ERROR: Hugging Face returned non-JSON response:")
         print(response.text)
         return None
 

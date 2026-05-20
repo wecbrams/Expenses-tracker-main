@@ -13,9 +13,8 @@ SCROLL_SPEED = 300
 SCROLL_DELAY = 1  # seconds between scrolls
 CAM_WIDTH, CAM_HEIGHT = 640, 480
 
-# ---------------------------------------------------
 # Function to detect gestures (open palm or fist)
-# ---------------------------------------------------
+
 def detect_gesture(landmarks, handedness):
     fingers = []
 
@@ -55,9 +54,7 @@ def detect_gesture(landmarks, handedness):
         return "none"
 
 
-# ---------------------------------------------------
 # Initialize camera
-# ---------------------------------------------------
 cap = cv2.VideoCapture(0)
 cap.set(3, CAM_WIDTH)
 cap.set(4, CAM_HEIGHT)
@@ -70,9 +67,7 @@ print("Open palm → Scroll Up")
 print("Fist → Scroll Down")
 print("Press 'q' to exit\n")
 
-# ---------------------------------------------------
 # Main loop
-# ---------------------------------------------------
 while cap.isOpened():
     success, img = cap.read()
     if not success:

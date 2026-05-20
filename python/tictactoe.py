@@ -27,17 +27,13 @@ def printBoard(board):
 
 # Now we'll write the main function which has all the gameplay functionality.
 def game():
-
     turn = 'X'
     count = 0
-
 
     for i in range(10):
         printBoard(theBoard)
         print("It's your turn," + turn + ".Move to which place?")
-
         move = input()        
-
         if theBoard[move] == ' ':
             theBoard[move] = turn
             count += 1
@@ -92,19 +88,16 @@ def game():
         if count == 9:
             print("\nGame Over.\n")                
             print("It's a Tie!!")
-
         # Now we have to change the player after every move.
         if turn =='X':
             turn = 'O'
         else:
             turn = 'X'        
-    
-    # Now we will ask if player wants to restart the game or not.
-    restart = input("Do want to play Again?(y\n)")
-    if restart == "y" or restart == "Y":  
+        # Now we will ask if player wants to restart the game or not.
+    restart = input("Do want to play Again?(y\n)").lower()
+    if restart == "y": 
         for key in board_keys:
             theBoard[key] = " "
-
         game()
 
 if __name__ == "__main__":

@@ -10,14 +10,10 @@ def prob_a_and_b(a, b, total):
 
 	# add return statement here
 	return round(prob_AandB,3)
-  
-
-# taking input for total number of orange and blue balls
+  # taking input for total number of orange and blue balls
 orange = int(input("Enter number of orange balls "))
 blue = int(input("Enter number of blue balls "))
 total = orange+blue
-
-
 # call function for final result
 print('Probability of Getting 1st orange and 2nd blue ball: ')
 print(prob_a_and_b(orange, blue, total))

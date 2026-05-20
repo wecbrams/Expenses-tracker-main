@@ -1,5 +1,4 @@
 def find_prob(a,b):
-
 	if a==1:
 		prob_a = 0.2
 		if b==1: 

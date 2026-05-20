@@ -1,0 +1,59 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+.hero {
+    background-image: url("https://images.unsplash.com/photo-1504674900247-0877df9cc836");
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+}
+.section {
+    padding: 50px;
+    text-align: center;
+}
+.section-dark {
+    background-color: #333;
+    color: white;
+}
+
+.section-light {
+    background-color: #f4f4f4;
+    color: black;
+}
+
+.image-section {
+    background: #ff6347;
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+.img-right {
+    width: 200px;
+    float: right;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.img-left {
+    width: 200px;
+    float: left;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.section::after {
+    content: "";
+    display: block;
+    clear: both;
+}

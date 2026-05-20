@@ -1,0 +1,117 @@
+<html>
+    <head>
+        <title>Modern Footer</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+        <style>
+        body{
+            margin:0;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+        /* Footer Styling */
+        .footer{
+            background: linear-gradient(135deg,Black,gray,darkgray);
+            color:white;
+            padding:40px 20px 20px 20px;
+        }
+        /* Footer Layout */
+        .footer-container{
+            display:flex;
+            justify-content:space-between;
+            flex-wrap:wrap;
+            max-width:1200px;
+            margin:auto;
+        }
+
+        .footer-section{
+            flex:1;
+            min-width:220px;
+            margin:10px;
+        }
+
+        .footer-section h3{
+            margin-bottom:15px;
+            border-bottom:2px solid #00d4ff;
+            display:inline-block;
+            padding-bottom:5px;
+        }
+        /* Links */
+        .footer-section a{
+            display:block;
+            text-decoration:none;
+            color:#ccc;
+            margin:6px 0;
+            transition:0.3s;
+        }
+        .footer-section a:hover{
+            color:#00d4ff;
+            transform:translateX(5px);
+        }
+        /* Social Icons */
+        .social-icons a{
+            display:inline-block;
+            margin:8px;
+            font-size:20px;
+            color:white;
+            transition:0.3s;
+        }
+        .social-icons a:hover{
+            color:#00d4ff;
+            transform:scale(1.2);
+        }
+        /* Bottom */
+        .footer-bottom{
+            text-align:center;
+            border-top:1px solid gray;
+            margin-top:25px;
+            padding-top:15px;
+            font-size:14px;
+        }
+        /* Responsive */
+        @media(max-width:768px){
+            .footer-container{
+                flex-direction:column;
+                text-align:center;
+            }
+        }
+        </style>
+    </head>
+    <footer class="footer">
+        
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>About</h3>
+                <p>This website is designed to deliver quality content</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick links</h3>
+                <a href="#">Home</a>
+                <a href="#">Services</a>
+                <a href="#">Projects</a>
+                <a href="#">Contact</a>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p><i class="fa fa-envelope">info@yz.x</i></p>
+                <p><i class="fa fa-phone">+2348089489</i></p>
+                <p><i class="fa fa-map-marker-alt">Abuja</i></p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="" class="fab fa-facebook"></a>
+                    <a href="" class="fab fa-twitter"></a>
+                    <a href="" class="fab fa-instagram"></a>
+                    <a href="" class="fab fa-linkedin"></a>
+                    <a href="" class="fab fa-github"></a>
+                </div>
+
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="year"></span>All rights reserved</p>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('year').innerHTML=new Date().getFullYear()
+    </script>
+</html>

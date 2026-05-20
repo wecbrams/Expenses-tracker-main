@@ -1,5 +1,4 @@
 import cv2   # Import OpenCV
-
 # Load the image
 image = cv2.imread("example.jpg")  
 

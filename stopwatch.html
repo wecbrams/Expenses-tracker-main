@@ -1,66 +1,136 @@
-<html>
-    <head>
-        <title>Stop watch</title>
-    </head>
-    <body>
-        <div class="wrapper">
-            <h1>Stop watch</h1>
-            <p><span id="seconds">00</span>:<span id="milliseconds">00</span></p>
-            <button id="button-start">Start</button>
-            <button id="button-stop">Stop</button>
-            <button id="button-reset">Reset</button>
-        </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modern Stopwatch</title>
 
-        <script>
-            window.onload=function(){
-                var seconds = "00";
-                var milliseconds = "00";
-                var appendmilliseconds = document.getElementById("milliseconds")
-                var appendseconds = document.getElementById("seconds")
-                var buttonstart = document.getElementById("button-start")
-                var buttonstop = document.getElementById("button-stop")
-                var buttonreset = document.getElementById("button-reset")
-                var interval;
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
 
-                buttonstart.onclick = function(){
-                    clearInterval(interval);
-                    interval=setInterval(startTimer, 10)
-                }
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background: linear-gradient(-45deg,#0f2027,#203a43,#2c5364,#00c6ff);
+    background-size:400% 400%;
+    animation: gradient 8s ease infinite;
+}
 
-                buttonstop.onclick= function(){
-                    clearInterval(interval);
-                }
-                buttonreset.onclick=function(){
-                    clearInterval(interval)
-                    milliseconds = "00";
-                    seconds="00";
-                    appendmilliseconds.innerHTML=milliseconds;
-                    appendseconds.innerHTML = seconds;
-                }
+@keyframes gradient{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
 
-                function startTimer(){
-                    milliseconds++; 
+.wrapper{
+    backdrop-filter: blur(20px);
+    background: rgba(255,255,255,0.1);
+    padding:40px 60px;
+    border-radius:20px;
+    text-align:center;
+    color:white;
+    box-shadow:0 10px 30px rgba(0,0,0,0.3);
+    animation: fadeIn 1s ease;
+}
 
-                    if(milliseconds <= 9){
-                        appendmilliseconds.innerHTML = "0" + milliseconds;
-                    }
-                    if (milliseconds > 9){
-                        appendmilliseconds.innerHTML = milliseconds;
-                    }
-                    if (milliseconds > 99) {
-                        seconds++;
-                        appendseconds.innerHTML = "0" + seconds;
-                        milliseconds = 0;
-                        appendmilliseconds.innerHTML = "0" + 0;
-                    }
-                    if (seconds > 9){
-                        appendseconds.innerHTML = seconds;
-                    }
-                }
-            }
+@keyframes fadeIn{
+    from{opacity:0; transform: translateY(20px);}
+    to{opacity:1; transform: translateY(0);}
+}
 
+h1{
+    margin-bottom:20px;
+    font-weight:600;
+    letter-spacing:1px;
+}
 
-            
-        </script>
-    </body>
+.time{
+    font-size:60px;
+    margin-bottom:25px;
+    font-weight:bold;
+}
+
+button{
+    padding:10px 20px;
+    margin:5px;
+    border:none;
+    border-radius:30px;
+    font-size:16px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    transform:scale(1.1);
+}
+
+.start{ background:#00ff88; }
+.stop{ background:#ff4b5c; color:white; }
+.reset{ background:#ffc107; }
+
+</style>
+</head>
+
+<body>
+
+<div class="wrapper">
+    <h1>⏱ Stopwatch</h1>
+    <div class="time">
+        <span id="seconds">00</span>:<span id="milliseconds">00</span>
+    </div>
+    <button class="start" id="start">Start</button>
+    <button class="stop" id="stop">Stop</button>
+    <button class="reset" id="reset">Reset</button>
+</div>
+
+<script>
+let seconds = 0;
+let milliseconds = 0;
+let interval = null;
+
+const secEl = document.getElementById("seconds");
+const msEl = document.getElementById("milliseconds");
+
+document.getElementById("start").onclick = () => {
+    if(!interval){
+        interval = setInterval(run,10);
+    }
+};
+
+document.getElementById("stop").onclick = () => {
+    clearInterval(interval);
+    interval = null;
+};
+
+document.getElementById("reset").onclick = () => {
+    clearInterval(interval);
+    interval = null;
+    seconds = 0;
+    milliseconds = 0;
+    updateDisplay();
+};
+
+function run(){
+    milliseconds++;
+    if(milliseconds === 100){
+        milliseconds = 0;
+        seconds++;
+    }
+    updateDisplay();
+}
+
+function updateDisplay(){
+    secEl.textContent = seconds.toString().padStart(2,'0');
+    msEl.textContent = milliseconds.toString().padStart(2,'0');
+}
+</script>
+
+</body>
 </html>

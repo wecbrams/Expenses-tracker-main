@@ -1,0 +1,50 @@
+<html>
+
+<head>
+    <title>magic dice</title>
+    <link href="https://[Log in to view URL]" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Magic Dice</h1>
+        <p>Click the button or Dice to roll</p>
+        <div id="dice" onclick="startstop()">🎲</div>
+        <button onclick="startstop()">Roll/stop</button>
+        <div id="result"></div>
+    </div>
+    <script>
+        let dice
+        let timer
+        let stopped = true
+        const faces = ['⚀', '⚁', '⚂', '⚃', '⚄', '⚅']
+
+        function changeDice() {
+            const change = Math.floor(Math.random() * 6)
+            dice.innerHTML = faces[change]
+        }
+
+        function startstop() {
+            if (stopped) {
+                stopped = false
+                dice.classList.add("rolling")
+                timer = setInterval(changeDice, 100)
+            } else {
+                clearInterval(timer)
+                stopped = true
+                dice.classList.remove("rolling")
+                showResult()
+            }
+        }
+        function showResult() {
+            const number = faces.indexOf(dice.innerHTML) + 1
+            document.getElementById("result").innerHTML = "You rolled: <br>" + number + "</br>"
+        }
+        window.onload = function () {
+            dice = document.getElementById("dice")
+            changeDice()
+        }
+    </script>
+</body>
+
+</html>

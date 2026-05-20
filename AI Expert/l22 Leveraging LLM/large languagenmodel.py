@@ -1,11 +1,11 @@
 import requests
 from colorama import Fore, Style, init
+from config import keys
 
-# Initialize colorama for colored terminal output
 init(autoreset=True)
 
 # Replace this with your actual Hugging Face API key
-HF_API_KEY = "YOUR_HUGGING_FACE_API_KEY"
+# HF_API_KEY = "YOUR_HUGGING_FACE_API_KEY"
 
 # Default summarization model
 DEFAULT_MODEL = "google/pegasus-xsum"
@@ -23,7 +23,7 @@ def query(payload, model_name=DEFAULT_MODEL):
     """
     api_url = build_api_url(model_name)
     headers = {
-        "Authorization": f"Bearer {HF_API_KEY}"
+        "Authorization": f"Bearer {keys}"
     }
 
     response = requests.post(api_url, headers=headers, json=payload)
@@ -43,7 +43,7 @@ def summarize_text(text, min_length, max_length, model_name=DEFAULT_MODEL):
     }
 
     print(Fore.BLUE + Style.BRIGHT +
-          f"\n🤖 Performing AI summarization using model: {model_name}...")
+          f"\n Performing AI summarization using model: {model_name}...")
 
     result = query(payload, model_name)
 
@@ -51,14 +51,12 @@ def summarize_text(text, min_length, max_length, model_name=DEFAULT_MODEL):
     if isinstance(result, list) and len(result) > 0 and "summary_text" in result[0]:
         return result[0]["summary_text"]
     else:
-        print(Fore.RED + "❌ Error in summarization response:")
+        print(Fore.RED + "Error in summarization response:")
         print(result)
         return None
 
 
-# ================================
 # MAIN PROGRAM
-# ================================
 
 if __name__ == "__main__":
 

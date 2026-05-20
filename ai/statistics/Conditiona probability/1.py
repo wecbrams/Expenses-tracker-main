@@ -1,5 +1,4 @@
 def a_and_b(a, b):
-
 	if a==1:
 		prob_student = 0.3
 		if b ==1:
@@ -18,7 +17,6 @@ def a_and_b(a, b):
 	
 	prob_a_and_b = prob_student*prob_dining
 	return round(prob_a_and_b, 3)
-
 print("Check the probability of any event occuring. First enter your choices.")
 
 print("Is the student a Freshman? \n 1. Yes \n 2. No")

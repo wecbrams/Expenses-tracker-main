@@ -31,7 +31,7 @@ def apply_filter(image, ftype):
     return img
 
 def main():
-    cap = cv2.VideoCapture(0)
+    cap = cv2.VideoCapture(2)
     if not cap.isOpened():
         print("Cannot open camera")
         return

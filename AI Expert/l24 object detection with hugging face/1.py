@@ -19,7 +19,7 @@ def font(sz=18):
     return ImageFont.load_default()
 
 def ask_image():
-    print("\n🎯 Pick an image (JPG/PNG/WebP/BMP/TIFF ≤ 8MB) from this folder.")
+    print("\n🎯 Pick an image (JPG/PNG/WebP/BMP/TIFF <= 8MB) from this folder.")
     while True:
         p = input("Image path: ").strip().strip('"').strip("'")
         if not p or not os.path.isfile(p): print("⚠️ Not found."); continue
@@ -31,7 +31,6 @@ def ask_image():
 
 def infer(path, img_bytes, tries=8):
     mime, _ = mimetypes.guess_type(path)
-    # Prefer exact image/* content-type; fall back to multipart if guess fails
     for _ in range(tries):
         if mime and mime.startswith("image/"):
             r = requests.post(API,
