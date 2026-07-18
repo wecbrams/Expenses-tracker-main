@@ -94,7 +94,7 @@ def game():
         else:
             turn = 'X'        
         # Now we will ask if player wants to restart the game or not.
-    restart = input("Do want to play Again?(y\n)").lower()
+    restart = input("Do want to play Again?(y/n)").lower()
     if restart == "y": 
         for key in board_keys:
             theBoard[key] = " "

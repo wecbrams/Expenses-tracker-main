@@ -2,7 +2,6 @@ import cv2
 import numpy as np
 
 def apply_filter(image, ftype):
-    """Apply a filter to the image based on the filter type."""
     img = image.copy()
     if ftype == "red_tint":
         img[:, :, 1] = img[:, :, 0] = 0

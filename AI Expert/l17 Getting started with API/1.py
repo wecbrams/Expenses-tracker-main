@@ -1,6 +1,5 @@
 # joke_fetcher.py
 import requests
-
 API_URL = "https://official-joke-api.appspot.com/random_joke"
 
 def get_random_joke():
@@ -10,23 +9,18 @@ def get_random_joke():
     except requests.RequestException as e:
         # network error or request problem
         return f"Network error: {e}"
-
     if resp.status_code != 200:
         return f"API error: status code {resp.status_code}"
-
     try:
         data = resp.json()  # parse JSON into a Python dict
     except ValueError:
         return "Error: Response not valid JSON."
-
     # Safely get the fields we expect
     setup = data.get("setup")
     punchline = data.get("punchline")
     if not setup or not punchline:
         return "Error: Unexpected API response format."
-
     return f"{setup}\n→ {punchline}"
-
 def main():
     print("Random Joke Generator (press Enter to get a joke, type 'q' to quit)")
     while True:

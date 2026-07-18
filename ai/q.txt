@@ -1,0 +1,88 @@
+Google
+
+Practice Assignment
+Explore Gemini for job search support
+What to expect
+Due Jun 22, 11:59 PM EAT
+Unlimited attempts
+
+This is a practice assignment to help you check your understanding. It doesn’t count toward your course grade.
+Explore Gemini for job search support
+
+Practice Assignment • 15 min
+DueJun 22, 11:59 PM EAT
+
+Generative AI—AI that generates new content, like text—can be a powerful asset in your job search. It can help you draft application materials, conduct research, brainstorm strategies, and much more.
+
+This activity is designed to introduce you to Gemini
+
+, a generative AI tool from Google. You’ll start experimenting in Gemini, prompting the tool to suggest some ways it could help you with aspects of your job search.
+
+Think about how you could use Gemini to help with your job search or to get the most out of this course. Open a new document and record your ideas. For example:
+
+    "Gemini could help me practice answers to common interview questions for a [your target job role]."
+
+    “Gemini could describe some common challenges I might encounter and how I could address them.”
+
+    "I could use Gemini to help me summarize articles about industry trends relevant to my job search."
+
+    "Gemini could help me draft a networking outreach message."
+
+    "I could ask Gemini to help me create a schedule to work through this course."
+
+Your goal here is to become comfortable with Gemini and get a sense of how it responds to job search-related requests.
+
+    Open Gemini
+
+    . If you’re new to Gemini, sign in with your Google account.
+
+    To use Gemini effectively, you need to give it clear and specific instructions, called prompts.
+
+    Refer back to the ideas you listed in Step 1. Then, in Gemini's chatbox, type a prompt based on one of those ideas, including some background context from your personal experience. 
+
+    Press Enter or click the send icon to submit your prompt. Then, review what Gemini generates! 
+
+    Feel free to prompt as many times as you wish.
+
+Example prompt: I am currently seeking a new job as a [job role]. I'm looking for practical advice on how to navigate potential roadblocks and stay motivated. Acting as an experienced career coach, describe five common job search challenges and for each, provide at least two actionable strategies to overcome them.
+
+Pro tip: As you progress through this course, add any effective prompt iterations that you come up with to this AI prompt library template
+
+. This personalized library will empower you to quickly access and adapt your go-to prompts, streamlining various tasks in your job search
+
+null
+
+Save your ideas document to your job search portfolio. As you progress through this course and engage in your job search, refer back to these ideas to leverage Gemini's potential throughout your job search, using it to streamline tasks, overcome challenges, and uncover new opportunities.
+1.
+Question 1
+
+Self-assessment
+
+What was one specific response or idea from Gemini that you found particularly helpful for your job search? What sparked your interest about this idea, and how do you envision applying it in your job search?
+.
+​
+You can enter up to 10,000 characters
+
+10,000 characters remaining
+You have 10,000 characters remaining
+1 point
+2.
+Question 2
+
+Self-assessment
+
+What was your initial reaction or feeling about using a generative AI tool to assist in your job search?
+.
+​
+You can enter up to 10,000 characters
+
+10,000 characters remaining
+You have 10,000 characters remaining
+1 point
+Coursera Honor Code
+
+By clicking Submit, you confirm this work is your own. Submitting work created with AI tools may result in course failure or account deactivation according to Coursera Honor Code policy.
+Your legal name as it appears on your government issued ID.
+​
+
+Last saved on Jun 24, 6:29 PM EAT
