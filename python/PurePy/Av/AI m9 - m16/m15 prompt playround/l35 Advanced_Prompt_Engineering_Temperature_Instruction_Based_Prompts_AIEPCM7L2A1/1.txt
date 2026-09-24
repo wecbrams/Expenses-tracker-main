@@ -1,0 +1,76 @@
+Google
+
+Practice Assignment
+Test your knowledge: Manage file content in Bash
+What to expect
+Due Jul 1, 11:59 PM EAT
+Unlimited attempts
+
+This is a practice assignment to help you check your understanding. It doesn’t count toward your course grade.
+Test your knowledge: Manage file content in Bash
+
+Practice Assignment • 8 min
+DueJul 1, 11:59 PM EAT
+1.
+Question 1
+
+What two arguments commonly follow the grep command?
+.
+
+The file to move and the new file location
+
+The string to search for and the file to search through
+
+The file to write to and the string to add to it
+
+The file name to search for and the directory to search through
+1 point
+2.
+Question 2
+
+In Linux, what does the piping command (|) do?
+.
+
+It moves a file or directory to a new location.
+
+It searches a specified file and returns all lines in the file containing a specified string.
+
+It sends the standard output of one command as standard input to another command for further processing.
+
+It sends the standard input of one command as standard output to another command for further processing.
+1 point
+3.
+Question 3
+
+A security professional enters cp vulnerabilities.txt /home/analyst/projects into the command line. What do they want the operating system to do?
+.
+
+Remove the vulnerabilities.txt file from the projects directory
+
+Create a new file named vulnerabilities.txt in the projects directory
+
+Search for the string vulnerabilities.txt in the projects directory
+
+Copy the vulnerabilities.txt file into the projects directory
+1 point
+4.
+Question 4
+
+What command creates a new file called failed_logins.txt?
+.
+
+find failed_logins.txt
+
+touch failed_logins.txt
+
+mkdir failed_logins.txt
+
+rm failed_logins.txt
+1 point
+Coursera Honor Code
+
+By clicking Submit, you confirm this work is your own. Submitting work created with AI tools may result in course failure or account deactivation according to Coursera Honor Code policy.
+Your legal name as it appears on your government issued ID.
+​
+
+Last saved on Jun 19, 8:24 PM EAT
