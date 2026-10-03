@@ -2,9 +2,8 @@
 
 #Change groq --> hf to use hugging face API
 #Change hf --> groq to use groq API
+#from hf import generate_response
 from hf import generate_response
-# from hf import generate_response
-
 import time
 
 def temperature_prompt_activity():
